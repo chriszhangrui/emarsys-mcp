@@ -459,6 +459,37 @@ async def emarsys_count_segment_contacts(segment_id: Union[str, int]) -> str:
         return json.dumps({"error": str(e)}, indent=2, ensure_ascii=False)
 
 
+@mcp.tool(
+    name="emarsys_create_segment",
+    description="Create a new dynamic segment (filter) in Emarsys based on contact criteria and behavior rules. In Emarsys, segments are officially called 'filters'.",
+)
+async def emarsys_create_segment(
+    name: str,
+    contact_criteria: Dict[str, Any],
+    description: Optional[str] = None,
+    base_contact_list_id: Optional[Union[str, int]] = None,
+) -> str:
+    """Create a new dynamic segment (filter) in Emarsys."""
+    try:
+        payload: Dict[str, Any] = {
+            "name": name,
+            "contactCriteria": contact_criteria,
+        }
+        if description:
+            payload["description"] = description
+        if base_contact_list_id:
+            payload["baseContactListId"] = str(base_contact_list_id)
+
+        # Emarsys API: PUT /v2/filter (maps to /api/v3/filter under OAuth2)
+        res = await emarsys_client.request("PUT", "/api/v3/filter", json_data=payload)
+        return json.dumps(res, indent=2, ensure_ascii=False)
+    except EmarsysAPIError as e:
+        return json.dumps(e.to_dict(), indent=2, ensure_ascii=False)
+    except Exception as e:
+        return json.dumps({"error": str(e)}, indent=2, ensure_ascii=False)
+
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # 5. Email Marketing Campaign Tools
 # ═══════════════════════════════════════════════════════════════════════════════
