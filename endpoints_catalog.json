@@ -1,0 +1,3162 @@
+[
+  {
+    "folder": "/v2/ ( Suite ) / Administrator / {administrator Id}",
+    "name": "Get Administrator Details",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/administrator/:administratorId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/administrator/:administratorId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "administrator",
+        ":administratorId"
+      ],
+      "variable": [
+        {
+          "key": "administratorId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the administrator."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the details of an admininstrator user of the customer's account.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator / {administrator Id}",
+    "name": "Update an Administrator Account",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/administrator/:administratorId/patch",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/administrator/:administratorId/patch",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "administrator",
+        ":administratorId",
+        "patch"
+      ],
+      "variable": [
+        {
+          "key": "administratorId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the adminstrator."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"administratorId\": \"111111111\",\n  \"username\": \"b_panther\"\n}",
+    "desc": "Modifies the properties of an administrator account.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator / {administrator Id}",
+    "name": "Delete an Administrator Account",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/administrator/:administratorId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/administrator/:administratorId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "administrator",
+        ":administratorId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "administratorId",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes an administrator account and transfers its rights to another administrator account."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator / {administrator Id}",
+    "name": "Create a Session for an Administrator Account",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/administrator/:administratorId/session",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/administrator/:administratorId/session",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "administrator",
+        ":administratorId",
+        "session"
+      ],
+      "variable": [
+        {
+          "key": "administratorId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the administrator.\n\n**Note:** Get available administrators at the [List Administrator Accounts](/reference/openapi.json/paths/~1v2~1administrator/get) endpoint."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"target\": \"contact_lists/details\",\n  \"target_params\": {\n    \"contact_list_id\": \"577064194\"\n  }\n}",
+    "desc": "Creates a session for administrators for logging in users from outside the Emarsys application, such as implementing Single Sign-On (SSO).\n\n**Note:** This feature is in the pilot phase and currently available for a limited number of clients only. If you are interested in participating, contact Emarsys support.\n\n**Important:** This feature is in the pilot phase and currently available for a limited number of clients only. If you are interested in participating, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator",
+    "name": "Create an Administrator Account",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/administrator",
+    "url_obj": {},
+    "body_raw": "{\n  \"username\": \"black_panther\",\n  \"password\": \"Black891+Panther\",\n  \"pwd_update_interval\": 30,\n  \"email\": \"black.panther@emarsys.com\",\n  \"access_level\": 1,\n  \"interface_language\": \"en\",\n  \"default_upages_lang\": \"en\",\n  \"first_name\": \"Black\",\n  \"last_name\": \"Panther\",\n  \"mobile_phone\": \"36-304445555\",\n  \"position\": \"superhero\",\n  \"last_verification_action_date\": \"2015-05-14 11:24:09\",\n  \"actual_login\": \"2015-06-10 09:45:54\",\n  \"disabled\": 0,\n  \"superadmin\": 0\n}",
+    "desc": "Creates a new administrator account.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator",
+    "name": "List Administrator Accounts",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/administrator",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns a list of administrator users of the customer's account.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator",
+    "name": "List Access Levels",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/administrator/getaccesslevels",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns the list of available access levels for the customer's account.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator",
+    "name": "Get User Interface Languages",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/administrator/getinterfacelanguages",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns the list of available user interface languages of the Emarsys application.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Administrator",
+    "name": "List Administrator Start Pages",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/administrator/getstartpages",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Lists the start pages where administrators are redirected to on login.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Autoimport / { profileId }",
+    "name": "Query an Auto-import Profile",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/settings/autoimports/:profileId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/settings/autoimports/:profileId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "settings",
+        "autoimports",
+        ":profileId"
+      ],
+      "variable": [
+        {
+          "key": "profileId",
+          "value": "-24187902.757311657",
+          "description": "(Required) The identifier of the auto-import profile. Use the [List Auto-import Profiles](/reference/openapi.json/paths/~1v2~1settings~1autoimports/get) endpoint to query available profiles and their identifiers."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the details of the specified auto-import profile."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Autoimport / { profileId }",
+    "name": "Delete an Auto-import Profile",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/settings/autoimports/:profileId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/settings/autoimports/:profileId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "settings",
+        "autoimports",
+        ":profileId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "profileId",
+          "value": "-24187902.757311657",
+          "description": "(Required) The identifier of the auto-import profile. Use the [List Auto-import Profiles](/reference/openapi.json/paths/~1v2~1settings~1autoimports/get) endpoint to query available profiles and their identifiers."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes the specified auto-import profile."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Autoimport",
+    "name": "Create an Auto-import Profile",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/settings/autoimports/",
+    "url_obj": {},
+    "body_raw": "{\n  \"fields\": {},\n  \"separator\": \",\",\n  \"language\": \"en\",\n  \"date_format\": \"DD.MM.YYYY\",\n  \"optin\": \"\",\n  \"userlist_name\": \"\",\n  \"text_separator\": \"\",\n  \"file_pattern\": \"*.csv\",\n  \"source\": \"\",\n  \"fieldnames\": false,\n  \"as_list\": false,\n  \"newsletter\": false,\n  \"skip_empty\": false,\n  \"update_only\": false,\n  \"enabled\": false\n}",
+    "desc": "Creates a new Auto-import Profile with the parameters you specify in the request body.\n\nNo need to provide a name, the system names the new profile and it can be read in the reply."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Autoimport",
+    "name": "List Auto-import Profiles",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/settings/autoimports",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Lists all auto-import profiles."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Automation / Programs / {program id}",
+    "name": "Abort a Program",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/ac/programs/:program_id/abort",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/ac/programs/:program_id/abort",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "ac",
+        "programs",
+        ":program_id",
+        "abort"
+      ],
+      "variable": [
+        {
+          "key": "program_id",
+          "value": "81739474",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "<!-- theme: warning -->\n> #### Watch Out!\n>\n> This endpoint is getting deprecated in July 2022 and calls from then on will result in an error `9103` reply. We recommend freezing, finishing programs or using the [Delete a Program](/reference/openapi.json/paths/~1v2~1ac~1programs~1{program_id}~1delete/post) endpoint instead.\n\nAborts the selected Automation Center program."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Automation / Programs / {program id}",
+    "name": "Delete a Program",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/ac/programs/:program_id/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/ac/programs/:program_id/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "ac",
+        "programs",
+        ":program_id",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "program_id",
+          "value": "81739474",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes a specified Automation Center program."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Automation / Programs",
+    "name": "List Programs",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/ac/programs",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns a list of all available (not deleted) Automation Center programs for a customer."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Automation / Programs",
+    "name": "Start a Program",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/ac/programs/entrypoints/:nodeType/resources/:resourceId/runs",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/ac/programs/entrypoints/:nodeType/resources/:resourceId/runs",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "ac",
+        "programs",
+        "entrypoints",
+        ":nodeType",
+        "resources",
+        ":resourceId",
+        "runs"
+      ],
+      "variable": [
+        {
+          "key": "nodeType",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the integration’s node.\n\n**Note:** Emarsys support can provide node identifiers."
+        },
+        {
+          "key": "resourceId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the integration specified in the integration’s API node."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"contact_list_id\": 123456789\n}",
+    "desc": "Starts the progress of contacts through Automation Center programs at the specified entry point of the selected resource."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact / Query",
+    "name": "List Contact Data",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contact/query/?{fieldId}=Ut pariatur adipisicing irure ut&return=81739474&excludeempty=false&limit=10000&offset=0",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contact/query/?{fieldId}=Ut pariatur adipisicing irure ut&return=81739474&excludeempty=false&limit=10000&offset=0",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contact",
+        "query",
+        ""
+      ],
+      "query": [
+        {
+          "key": "{fieldId}",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "The field identifier and it's value to filter the result.\n\n**Note:** Send an empty string as the field value to return fields with `null` value."
+        },
+        {
+          "key": "return",
+          "value": "81739474",
+          "description": "(Required) Specifies the field identifier to filter contacts."
+        },
+        {
+          "key": "excludeempty",
+          "value": "false",
+          "description": "If `true`, contacts with a null or empty value in the specified field are not returned.\n\n**Note:** Any value except for `true` is interpreted as false."
+        },
+        {
+          "key": "limit",
+          "value": "10000",
+          "description": "Specifies the maximum number of records to return."
+        },
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "Specifies an offset for pagination. The offset of the first record is *0*."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of the values of the specified field as well as the related contact identifiers (`id`). See [Concepts](docs/before-you-start/concepts.md) for details.\n\n**Example:** The field identifier *1* returns the first names of all contacts.\n\n>***Tip:** You can use the [Postman Collection](https://raw.githubusercontent.com/emartech/developer-hub-public-assets/master/resources/EmarsysV2PostmanCollection.json) to test the endpoint."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact / Query",
+    "name": "Get Internal Contact Identifiers",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contact/query/?{{keyId}}={{keyValue}}&return=81739474&limit=1000000&offset=0&excludeempty=true",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contact/query/?{{keyId}}={{keyValue}}&return=81739474&limit=1000000&offset=0&excludeempty=true",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contact",
+        "query",
+        ""
+      ],
+      "query": [
+        {
+          "key": "{{keyId}}",
+          "value": "{{keyValue}}"
+        },
+        {
+          "key": "return",
+          "value": "81739474",
+          "description": "(Required) The identifier pf the field to return along with the contact identifier. If not provided, only the contact identifier is returned."
+        },
+        {
+          "key": "limit",
+          "value": "1000000",
+          "description": "Specifies the maximum number of records to return."
+        },
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "Specifies an offset for pagination. The offset of the first record is *0*."
+        },
+        {
+          "key": "excludeempty",
+          "value": "true",
+          "description": "If `true`, contacts with a null or empty value in the specified field are not returned.\n\n**Note:** Any value except for `true` is interpreted as false."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the internal identifier of a contact by the specified field and its value. For details about contact identifiers, see [Concepts](docs/before-you-start/concepts.md).\n\n**Important:** This endpoint requires indexed fields. When you select a `keyId`, it needs to have an index.\n\n**Note:** As with [List Contact Data](reference/openapi.json/paths/~1v2~1contact~1query~1/get), the interactive demo page (Try it out) is not functional for this eddpoint. We are working on this issue."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Create Contacts",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact",
+    "url_obj": {},
+    "body_raw": "{\n  \"contact_list_id\": -39176876,\n  \"key_id\": \"consectetur non\",\n  \"contacts\": [\n    {\n      \"2\": \"Ut occaecat sit minim\",\n      \"3\": \"esse enim veniam est\"\n    },\n    {\n      \"2\": \"culpa consectetur ea in\",\n      \"3\": \"cillum sed\"\n    }\n  ]\n}",
+    "desc": "Creates new contacts, returns their automatically generated unique identifier (`id`), and maps their data to the relevant fields using the respective field identifiers. For details, see [Concepts](docs/before-you-start/concepts.md).\n\n**Note:**\n\nThe example below in the Request Body section shows the scenario when multiple contacts are created. However, when only a single contact is to be added, the following JSON structure must be used:\n ```\n {\n \"key_id\" : \"3\",\n \"3\" : \"johndoe@example.com\",\n \"1\" : \"John\",\n \"2\" : \"Doe\"\n}\n```\n\n**To consider:**\n- The maximum payload size is 10 MB, therefore the maximum number of new contacts per call depends on the amount of data per contact.\n- The maximum batch size is 1000 contacts per call.\n\n**Note:** Due to limitations of API specification languages, dynamic keys are indicated by curly brackets or by a regex pattern.\n\n**Important:** When [Exporting updated contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post), contacts that were updated through this endpoint will only be exported if their email address or opt-in status were updated."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Update Contacts",
+    "method": "PUT",
+    "raw_url": "{{baseUrl}}/v2/contact/?create_if_not_exists=0",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contact/?create_if_not_exists=0",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contact",
+        ""
+      ],
+      "query": [
+        {
+          "key": "create_if_not_exists",
+          "value": "0",
+          "description": "If set to *1*, creates a new contact if it does not exist yet.\n\nIf not set, defaults to *0*."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"contact_list_id\": -28031749,\n  \"key_id\": 78179,\n  \"contacts\": [\n    {\n      \"2\": \"eiusmod minim consectetur\",\n      \"3\": \"enim esse pariatur\"\n    },\n    {\n      \"2\": \"veniam sint in consectetur\",\n      \"3\": \"anim ut do\"\n    }\n  ]\n}",
+    "desc": "Updates multiple contacts, or creates them if they do not exist.\n\nIt is recommended to use the `id` or `uid` fields to identify contacts in order to avoid conflicts when using a non-unique field, such as `email`.\n\nFor details, see [Concepts](docs/before-you-start/concepts.md).\n\n**Notes:**\n- The maximum payload size is 8 MB, therefore the maximum number of contacts per call depends on the amount of data per contact.\n- The maximum batch size is 1000 contacts per call.\n- Only use the values *1*, *2*, or *null* to update opt-in status. Boolean string literals are not supported. For details, see [Automated double opt-in program](https://help.emarsys.com/hc/en-us/articles/360006090693-Automated-double-opt-in-program) and the #docTextSection:LJhx4uCejc6xpXXFq use case.\n- Updating a contact is an idempotent method, meaning that it can be called multiple times with the same outcome. Note that as a `PUT` request, it replaces all contact information for the contact fields included in the request body (only for the contacts specified in the request), so please make sure that you either: a) include **only** the fields you want to update, or b) populate **all the current field values** and then **add a new value** to the fields that need to be updated.\n- In case you are using the `setEmail` Web Extend command to identify your customers, whenever an update is done by your customers in their email addresses, please make sure to set the `predictUserID` and the `predictSecret` fields to `\"\"` (empty) in the payload. This is done to make sure that a new Predict user ID is created for them as soon as the web behavior field updates take place, usually within 2 hours. Only in this 2-hour period are personalized recommendations not available to view.\n-  When using this endpoint to unsubscribe contacts from an email campaign, also do register the unsubscribe with the [/v2/email/unsubscribe](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NDU) call. \n- Updating **multi-choice fields** is also possible. The following is a simple verification example for this scenario:\n\n``\nPUT     https://api.emarsys.net/api/v2/contact/?create_if_not_exists=1\n``\n```json\n{\n \"3\": \"myemail@gmail.com\",\n \"8765\": [\n    \"foo\",\n    \"bar\",\n    \"baz\",\n    \"qux\"\n  ],\n  \"key_id\": \"3\"\n}\n```\n\nSee [Create Contacts](paths/~1v2~1contact/post) for more information on contact details.\n\n> *Important:** Due to limitations of API specification languages, dynamic keys are not yet supported in query strings on the interactive demo page (**Try it out**). We are working on this issue.<br><br>**Tip:** You can use the [Postman Collection](https://raw.githubusercontent.com/emartech/developer-hub-public-assets/master/resources/EmarsysV2PostmanCollection.json) to test the endpoint.\n\n**Important:** When [Exporting updated contacts]([Export Updated Contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post)), contacts that were updated through this endpoint will only be exported if their email address or opt-in status were updated."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Get Contact Data",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/getdata",
+    "url_obj": {},
+    "body_raw": "{\n  \"contact_list_id\": 49809834,\n  \"keyId\": 94011517,\n  \"keyValues\": [\n    \"sunt cillu\",\n    \"aliqua ad sint eu\"\n  ],\n  \"fields\": [\n    \"cupidatat consequat\",\n    \"Ut qui dolor in\"\n  ]\n}",
+    "desc": "Returns the field values of the contacts specified by either their internal identifiers or by a custom property.\n\nIt is recommended to use the `id` or `uid` fields to identify contacts in order to avoid conflicts when using a non-unique field, such as `email`.\n\nFor details about customer identifiers and properties, see [Concepts](docs/before-you-start/concepts.md).\n\n**Note:** The maximum number of objects per request is 1000.\n\n>When a contact is not found, the reply code is still `200`. The reply text makes this clear by the message: **No contact found**.\n>\n>If all contact identifiers given in a call fail to parse, the result will be ``false`` and **not** an array. Possible reasons for the ``false`` result:\n>- incorrect contact ``id`` or ``key`` format \n>- typo\n>- contact ``id`` does not exist in the database\n\n\n"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Merge Contacts",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/merge",
+    "url_obj": {},
+    "body_raw": "{\n  \"contact_list_id\": 78,\n  \"key_id\": \"3\",\n  \"source_key_value\": \"source@email.com\",\n  \"target_key_value\": \"target@email.com\",\n  \"merge_rules\": {\n    \"1\": \"overwrite\",\n    \"2\": \"overwrite\"\n  },\n  \"delete_source\": false\n}",
+    "desc": "Merges two existing contacts specified by any contact field. For details on contact identifiers and fields, see [Concepts](docs/before-you-start/concepts.md).\n\n**Note:** Due to limitations of API specification languages, dynamic keys are indicated by curly brackets or by a regex pattern."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Delete Contacts",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/delete",
+    "url_obj": {},
+    "body_raw": "{\n  \"{keyFieldIdentifier}\": [\n    \"in nulla\",\n    \"veniam non\"\n  ],\n  \"contact_list_id\": 85347089,\n  \"key_id\": -56482251\n}",
+    "desc": "Deletes a single or multiple contacts. If the provided identifier is not unique (such as email or custom field value), duplicate contacts are not deleted.\n\nThe maximum **batch** size is 1000 contacts per call.\n\n**Important:** This action cannot be reverted, and removes all existing data associated with the contact. To *unsubscribe* contacts, set their opt-in status to *false* instead.\n\n**Note:** Due to limitations of API specification languages, dynamic keys are indicated by curly brackets or by a regex pattern."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Verify Internal Contact Identifiers",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/checkids",
+    "url_obj": {},
+    "body_raw": "{\n  \"key_id\": \"exercitation\",\n  \"external_ids\": [],\n  \"contact_list_id\": -30989885,\n  \"get_multiple_ids\": false\n}",
+    "desc": "Generates a list of existing contacts and errors indexed by the specified key identifier.\n\nFor details about contact identifiers, see [Concepts](docs/before-you-start/concepts.md).\n\nErrors are collected in the following cases:\n- The provided key identifier is invalid\n- No contact is found\n- More than one contact is found with the same key value"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Get Contact Email History",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/getcontacthistory",
+    "url_obj": {},
+    "body_raw": "{\n  \"contact_list_id\": 46714,\n  \"startDate\": \"2014-11-05\",\n  \"endDate\": \"2014-11-05\",\n  \"contacts\": [\n    176415518,\n    749678081\n  ]\n}",
+    "desc": "Returns a list of email campaign launch data for the specified contacts in the specified timeframe (optional).\n\n**Note**: The email campaigns whose launch list details have already been archived (after approx. 30 days), will not be part of the result. For these campaigns, the launch list has to be manually generated in the platform UI by clicking any of the blue lines on the reporting screen. The data are restored for one day, during which they are available to query with the API."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Query Field Changes",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/last_change",
+    "url_obj": {},
+    "body_raw": "{\n  \"keyId\": 38019978,\n  \"keyValues\": [\n    \"nostrud fugiat\",\n    \"elit eiusmod occaecat\"\n  ],\n  \"fieldId\": -99582809\n}",
+    "desc": "Returns information about the latest change of the specified fields, inclucing the change timestamp, as well as the old and the current values."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Export Updated Contacts",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/getchanges",
+    "url_obj": {},
+    "body_raw": "{\n  \"distribution_method\": \"local\",\n  \"origin\": \"api\",\n  \"origin_id\": 0,\n  \"time_range\": [\n    \"esse nostrud dolor officia\",\n    \"ad officia dolor irure dolore\"\n  ],\n  \"contact_fields\": [\n    95643797\n  ],\n  \"delimiter\": \",\",\n  \"add_field_names_header\": 1,\n  \"language\": \"gi\",\n  \"ftp_settings\": {\n    \"host\": \"http://MiMMYzMIw.ckGiBNw7j27pt\",\n    \"port\": \"adipisicing dolor\",\n    \"username\": \"laboru\",\n    \"password\": \"quis deserunt\",\n    \"folder\": \"minim laboris aliqua quis\"\n  },\n  \"notification_url\": \"http://sQjizuCHKUTBFywwdcOT.ysvP3bXlVTSy06qlCRrwgRX8IasM5RQC-wprJ5.mpJg0fxj\"\n}",
+    "desc": "Exports the specified fields of contacts that have been modified within a certain time period. The changes must come from the specified form or API source to be included.\n\n**Important:** Contacts that were updated through contact imports or via the [Create contacts](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4MDc-create-contacts) or [Update contacts](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4MTE-update-contacts) endpoint get exported only if their email address or opt-in status were updated.\n\n| SOURCE | |UPDATED FIELDS |  | \n| --- | --- | --- | --- |\n| |   **Email address** | **Opt-in status** | **Other** | \n| **Forms (`register.php`)** | contact exported | contact exported | contact exported |\n| **API: [Contact update](reference/openapi.json/paths/~1v2~1contact~1/put)** | contact exported | contact exported | contact exported |\n| **[Data import](https://help.emarsys.com/hc/en-us/articles/360013356254-Overview-Data-Import-Overview)**  | contact **not** exported | contact **not** exported | contact **not** exported |\n\n**Important:** \n\nThe results are saved as a CSV file that you can access in multiple ways.\n- Exports flagged as `local` are stored on the Emarsys server that you can download via WebDAV or an API call.\n- Exports flagged as `ftp` can be accessed via FTP.\n\n**Implementation**\n\n You can implement this method as follows:\n -Poll the [Check Export Status](reference/openapi.json/paths/~1v2~1export~1{exportId}/get) endpoint to track the export status. When done, access the file at the [Download Export Data](reference/openapi.json/paths/~1v2~1export~1{exportId}~1data/get) endpoint.\n- Set the `notification_url` parameter to implement a callback mechanism. When the export is ready, a request is sent to the provided URL with the same payload as the [Check Export Status](reference/openapi.json/paths/~1v2~1export~1{exportId}/get) response. Failures are retried 5 times, with a one-minute wait between each try.\n\n\n**Notes**\n- As we are using a proxy for FTP traffic, it is not necessary to whitelist any IPs on our side.\n- WebDAV access must be enabled first, and requires authentication to use. For a WebDAV account or (S)FTP access, contact Emarsys support.\n\n**Example**\n```csv\nuser_id;First Name;Last Name;E-Mail;Company\n8019189;user3;test_import;test1@emarsys.com;\n49036141;user3;test_import;test1@emarsys.com;\n50123406;user3;test_import;test1@emarsys.com;\n85600590;user3;test_import;test1@emarsys.com;\n```"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact",
+    "name": "Export Contact Registrations",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contact/getregistrations",
+    "url_obj": {},
+    "body_raw": "{\n  \"distribution_method\": \"local\",\n  \"time_range\": [\n    \"2889-66-32\",\n    \"9777-07-98\"\n  ],\n  \"contact_fields\": [\n    72768622\n  ],\n  \"contactlist\": -74171490,\n  \"with_timestamp\": 1,\n  \"delimiter\": \",\",\n  \"add_field_names_header\": 1,\n  \"language\": \"kt\",\n  \"ftp_settings\": {\n    \"host\": \"consectetur tempor aliqua magna\",\n    \"port\": \"in reprehenderit commodo exercitation fugiat\",\n    \"username\": \"eiusmod ad in dolore sed\",\n    \"password\": \"eu pariatur do sunt\",\n    \"folder\": \"sint nostrud\"\n  },\n  \"notification_url\": \"culpa ipsum id esse\"\n}",
+    "desc": "Exports the specified fields of contacts registered through an Emarsys form within the specified time period as a CSV file.\n\n**Tip:** If you want to export registrations from other sources, use the [Export Updated Contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post) endpoint.\n\n\n**Important:** \n\nThe results are saved as a CSV file that you can access in multiple ways.\n- Exports flagged as `local` are stored on the Emarsys server that you can download via WebDAV or an API call.\n- Exports flagged as `ftp` can be accessed via FTP.\n\n**Implementation**\n\nou can implement this method as follows:\n- Poll the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) endpoint to track the export status. When done, access the file at the [Download Export Data](/reference/openapi.json/paths/~1v2~1export~1{exportId}~1data/get) endpoint.\n- Set the `notification_url` parameter to implement a callback mechanism. When the export is ready, a request is sent to the provided URL with the same payload as the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) response. Failures are retried 5 times, with a one-minute wait between each try.\n\n**Notes**\n- As we are using a proxy for FTP traffic, it is not necessary to whitelist any IPs on our side.\n- WebDAV access must be enabled first, and requires authentication to use. For a WebDAV account or (S)FTP access, contact Emarsys support.\n\n**Example**\n```csv\nuser_id;First Name;Last Name;E-Mail;Company;last update\n135369573;user3;test_import;test1@emarsys.com;;\n171879718;user3;test_import;test1@emarsys.com;;\n183453150;user3;test_import;test1@emarsys.com;;\n188925627;user3;test_import;test1@emarsys.com;;\n```"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id} / contacts",
+    "name": "Look Up Contacts in a Contact List",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/contacts/",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/contacts/",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "contacts",
+        ""
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"contact_ids\": [\n    \"sunt labore\",\n    \"nostrud\"\n  ]\n}",
+    "desc": "Looks up contacts in the specified contact list."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id} / contacts",
+    "name": "Get Contact Data in a Contact List",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/contacts/data?fields=laborum amet&limit=1000000&offset=0",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/contacts/data?fields=laborum amet&limit=1000000&offset=0",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "contacts",
+        "data"
+      ],
+      "query": [
+        {
+          "key": "fields",
+          "value": "laborum amet",
+          "description": "(Required) Specifies the fields by identifier or name to include in the returned result.\n\nMultiple fields must be separated by a comma. For example `1,2,3` or `email,first_name`."
+        },
+        {
+          "key": "limit",
+          "value": "1000000",
+          "description": "Specifies the maximum number of records to return."
+        },
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "Specifies an offset for pagination. The offset of the first record is *0*."
+        }
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the data of the specified contacts in a contact list."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "List Contacts in a Contact List",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/?offset=0&limit=1000000",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/?offset=0&limit=1000000",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        ""
+      ],
+      "query": [
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "Specifies an offset for pagination. The offset of the first record is *0*."
+        },
+        {
+          "key": "limit",
+          "value": "1000000",
+          "description": "Specifies the maximum number of records to return."
+        }
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of contacts and their identifiers (`id`) in a contact list.\n\n**Example**\n\nhttps://api.emarsys.net/api/v2/contactlist/123456789/?limit=100000&offset=0"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "Rename a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/rename",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/rename",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "rename"
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"name\": \"blade\"\n}",
+    "desc": "Renames an existing contact list."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "Replace a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/replace",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/replace",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "replace"
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"key_id\": \"in d\",\n  \"external_ids\": 16604934\n}",
+    "desc": "Overwrites an existing contact list."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "Delete a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/deletelist",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/deletelist",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "deletelist"
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes a contact list.\n\n**Note:** Contacts in the list are not affected.\n\n**Warning:** If a contact list is used in a combined segment, you cannot delete it (error  ``400``, reply ``3008``)."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "Add Contacts to a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/add",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/add",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "add"
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"key_id\": \"laborum quis velit\",\n  \"external_ids\": 18781864\n}",
+    "desc": "Adds new contacts to an existing contact list."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "Count Contacts in a Contact List",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/count",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/count",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "count"
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the number of contacts in a contact list."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list / {list Id}",
+    "name": "Remove Contacts from a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contactlist/:listId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/contactlist/:listId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "contactlist",
+        ":listId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "listId",
+          "value": "81739474",
+          "description": "(Required) The contact list identifier."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"key_id\": \"amet reprehenderit culpa et\",\n  \"external_ids\": 59184216\n}",
+    "desc": "Removes contacts from an existing contact list.\n\n**Note:** At most 10,000 contacts can be deleted with each request."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list",
+    "name": "Create a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/contactlist",
+    "url_obj": {},
+    "body_raw": "{\n  \"key_id\": \"sint\",\n  \"name\": \"deserunt velit aliqua mollit\",\n  \"external_ids\": -33489977,\n  \"description\": \"irure\"\n}",
+    "desc": "The optional parameter `contactlist_id` is for **creating** or **updating** contact lists. It is usable in both single and batch calls. Each user in the batch is added to the same contact list. Otherwise the batch behaviour is identical with a single call.\n\nBatch call example:\n\n```\n{\n\"contact_list_id\":\"12345678\",\n\"key_id\":\"....\",\n\"contacts\":\n[\n    { ... },\n    { ... }\n]\n}\n\n```"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Contact list",
+    "name": "List Contact Lists",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/contactlist",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns a list of the available contact lists."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / trackedlinks",
+    "name": "Create a Tracked Link in an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/trackedlinks",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/trackedlinks",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "trackedlinks"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"section_id\": 1,\n  \"url\": \"http://example.com\"\n}",
+    "desc": "Creates a tracked link in the specified section of an email campaign.\n\n**Note:** Only template-based email campaigns have sections. The section identifier (`section_id`)of batch email campaigns is *1*."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / trackedlinks",
+    "name": "List Tracked Links in an Email Campaign",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/trackedlinks/:relativeId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/trackedlinks/:relativeId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "trackedlinks",
+        ":relativeId"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        },
+        {
+          "key": "relativeId",
+          "value": "81739474",
+          "description": "(Required) If provided, returns the data of a specific tracked link."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of all tracked links of an email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / trackedlinks",
+    "name": "Update a Tracked Link in an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/trackedlinks/:linkId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/trackedlinks/:linkId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "trackedlinks",
+        ":linkId"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        },
+        {
+          "key": "linkId",
+          "value": "81739474",
+          "description": "(Required) The tracked link identifier."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"url\": \"http://example.com\"\n}",
+    "desc": "Updates the URL parameter of a tracked link in an email campaign.\n\n**Note:** Template-based campaigns require that you update the section as well as the tracked link, as the link is also stored in the section."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / sections / {section Id}",
+    "name": "Get a Section of a Template-based Email Campaign",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/sections/:sectionId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/sections/:sectionId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "sections",
+        ":sectionId"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        },
+        {
+          "key": "sectionId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the section."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the details of a section of a template-based email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / sections / {section Id}",
+    "name": "Update a Section of a Template-based Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/sections/:sectionId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/sections/:sectionId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "sections",
+        ":sectionId"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        },
+        {
+          "key": "sectionId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the section."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"replyCode\": 0,\n  \"replyText\": \"OK\",\n  \"data\": {\n    \"id\": 4,\n    \"order\": 2,\n    \"group_id\": 111111111,\n    \"hide_on_mobile\": true,\n    \"header_source\": \"example\",\n    \"header_align\": \"left\",\n    \"body_source\": \"<a href=\\\"https://example.com/u/nrd.php?p=$uid$_$llid$_$cid$_$sid$_2\\\">example</a>\",\n    \"image_url\": \"https://example.com/image_placeholder.php?a\",\n    \"image_title\": \"\",\n    \"image_link\": \"https://example.com/image.png\",\n    \"image_align\": \"right\",\n    \"image_width\": null,\n    \"image_height\": null,\n    \"image_hide_on_mobile\": false,\n    \"image_mobile\": \"\",\n    \"image_mobile_name\": \"\",\n    \"link_url\": \"https://example.com/redirect\",\n    \"link_title\": \"Link to more\",\n    \"is_image_linked\": true,\n    \"is_header_linked\": true,\n    \"link_description\": \"\",\n    \"form_id\": 0,\n    \"form_title\": \"\",\n    \"target_audience\": \"segment\",\n    \"use_social_network\": \"0\",\n    \"enable_network_sharing\": false,\n    \"advanced_html_source\": \"\",\n    \"advanced_text_source\": \"\",\n    \"target_audience_segment_id\": 111111111\n  }\n}",
+    "desc": "Updates a content section of a template-based email campaign using the specified parameters."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / sections / {section Id}",
+    "name": "Delete a Section from a Template-based Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/sections/:sectionId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/sections/:sectionId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "sections",
+        ":sectionId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        },
+        {
+          "key": "sectionId",
+          "value": "81739474",
+          "description": "(Required) The section identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes a section from a template-based email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / sections",
+    "name": "Create a Section in a Template-based Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/sections",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/sections",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "sections"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"replyCode\": 0,\n  \"replyText\": \"OK\",\n  \"data\": {\n    \"id\": 6,\n    \"order\": 1,\n    \"group_id\": 111111111,\n    \"hide_on_mobile\": true,\n    \"header_source\": \"example\",\n    \"header_align\": \"left\",\n    \"body_source\": \"<a href=\\\"https://example.com/u/nrd.php?p=$uid$_$llid$_$cid$_$sid$_2\\\">example</a>\",\n    \"image_url\": \"https://example.com/image_placeholder.php?a\",\n    \"image_title\": \"\",\n    \"image_link\": \"http://example.com/image.png\",\n    \"image_align\": \"right\",\n    \"image_width\": null,\n    \"image_height\": null,\n    \"image_hide_on_mobile\": false,\n    \"image_mobile\": \"\",\n    \"image_mobile_name\": \"\",\n    \"link_url\": \"http://example.com\",\n    \"link_title\": \"example_title\",\n    \"is_image_linked\": true,\n    \"is_header_linked\": true,\n    \"link_description\": \"link\",\n    \"form_id\": 0,\n    \"form_title\": \"\",\n    \"target_audience\": \"segment\",\n    \"use_social_network\": \"0\",\n    \"enable_network_sharing\": false,\n    \"advanced_html_source\": \"\",\n    \"advanced_text_source\": \"\",\n    \"target_audience_segment_id\": 111111111\n  }\n}",
+    "desc": "Adds a new section to a template-based email campaign with the specified parameters."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id} / sections",
+    "name": "List Sections in a Template-based Email Campaign",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/sections",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/sections",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "sections"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of sections used in the specified template-based email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Get Email Campaign Data",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/?raw_text=0&raw_html=0",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/?raw_text=0&raw_html=0",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        ""
+      ],
+      "query": [
+        {
+          "key": "raw_text",
+          "value": "0",
+          "description": "Returns the actual links of the email content with the original URLs instead of the tracking URLs.\n\n**Note:** Using this parameter also affects the `html_source` and `text_source` fields in the response."
+        },
+        {
+          "key": "raw_html",
+          "value": "0"
+        }
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the campaign."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the details of an email campaign, such as content and attributes, including personalized text and HTML source."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Preview Email Campaign Contents",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/preview",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/preview",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "preview"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"version\": \"html\"\n}",
+    "desc": "Returns the HTML, plain text or mobile version of the email."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Send a Test Email",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/sendtestmail",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/sendtestmail",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "sendtestmail"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"subject\": \"superhero_party_invitation\",\n  \"recipientlist\": \"tony.stark@example.com; pepper.potts@example.com\"\n}",
+    "desc": "Sends a test email to the specified recipient list, segment, or contact list. Recipient list types cannot be combined.\n\n**Note:** The number of recipients must be less than 50. Additional recipients are ignored."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Launch an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/launch",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/launch",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "launch"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"emailID\": \"1234567890\",\n  \"schedule\": \"2011-08-12 08:35\",\n  \"timezone\": \"America/New_York\",\n  \"features\": [\n    \"sto\"\n  ]\n}",
+    "desc": "Initiates the launch of an existing email campaign. The actual launch takes place once the request is processed.\n\nThis endpoint launches a campaign to receipients already in the Emarsys contact database. If the contacts are not imported yet (virtual contacts), use the Launch an Email Campaign to Virtual Contacts (Broadcast) endpoint instead.\n\n**Important:** This is an asynchronous operation, and may take a couple of minutes to complete. The request initiates a background job and returns an identifier. Poll the Get Email Campaign Data endpoint to track the launch progress. Check the `api_status` and `api_error` parameters for the current status.\n\n**Tip:** Configure the recipient segment or contact list using the Create an Email Campaign endpoint.\n\n**Note:** A successful launch request may result in a failed launch, if the campaign is not properly configured. For example, a missing email subject or unspecified recipient list prevents a launch."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Launch an Email Campaign to Virtual Contacts (Broadcast)",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/broadcast",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/broadcast",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "broadcast"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"email\": \"virtual@contact.com\",\n  \"data\": {\n    \"global\": {\n      \"orderId\": \"123456789\",\n      \"orderDate\": \"2019-08-07\",\n      \"subject\": \"Test payload\"\n    }\n  }\n}",
+    "desc": "Launches an email campaign to contacts who are not in the Emarsys contact database (virtual contacts).\n\n**Important:** Because no personalization data is available for virtual contacts, the email address and all personalization data must be provided in the payload of the request.\n\n**Note:** You can launch a campaign to a single contact on this endpoint at a time."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Stop an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/stop",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/stop",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "stop"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign.\n"
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Stops an exiting email campaign, depending on its type.\n- Deactivates **triggered email campaigns**. Until the campaign is reactivated, any associated events are ignored and the campaign is not launched. For details and on-event mail stream statuses, see [Triggered Email User Guide](https://help.emarsys.com/hc/en-us/articles/115004461489-Triggered-Email-end-user-guide#the-mail-streams-list).\n- Aborts or unschedules **transactional campaigns**. Aborted campaigns cannot be rescheduled, while unscheduled ones revert to *In Design* status.\n\n**Note:** Already launched campaigns used in an Automation Center program cannot be stopped."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Get a Response Summary",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/responsesummary?launch_id=81739474&start_date=Ut pariatur adipisicing irure ut&end_date=Ut pariatur adipisicing irure ut",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/responsesummary?launch_id=81739474&start_date=Ut pariatur adipisicing irure ut&end_date=Ut pariatur adipisicing irure ut",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "responsesummary"
+      ],
+      "query": [
+        {
+          "key": "launch_id",
+          "value": "81739474",
+          "description": "The identifier of the campaign launch."
+        },
+        {
+          "key": "start_date",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "Returns results from the specified date.\n\n**Accepted formats:** YYYY-MM-DD HH:MM:SS, YYYY-MM-DD HH:MM, YYYY-MM-DD"
+        },
+        {
+          "key": "end_date",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "Returns results until the specified date.\n\n**Accepted formats:** YYYY-MM-DD HH:MM:SS, YYYY-MM-DD HH:MM, YYYY-MM-DD"
+        }
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the summary of the responses of a launched, paused, activated or deactivated email campaign.\n\nAcquire the necessary contact identifiers on the [Get Email Response Metrics and Deliverability Results](/reference/openapi.json/paths/~1v2~1email~1{queryId}~1responses/get) endpoint.\n\n> **Important:** Due to limitations of API specification languages, dynamic keys are not yet supported in query strings on the interactive demo page (**Try it out**). We are working on this issue.<br><br>**Tip:** You can use the [Postman Collection](https://raw.githubusercontent.com/emartech/developer-hub-public-assets/master/resources/EmarsysV2PostmanCollection.json) to test the endpoint."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "List Personalization Alternate Texts",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/personalization",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/personalization",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "personalization"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the list of email personalization fields with alternative values, and shows if personalization is omitted."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Get the URL of a Launched Email Campaign Content",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/url",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/url",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "url"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"key_id\": \"3\",\n  \"key_value\": \"clint.barton@example.com\"\n}",
+    "desc": "Returns the URL of a launched email campaign’s content for the specified contact."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Update an Email Campaign Recipient Source",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/updatesource",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/updatesource",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "updatesource"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"emailId\": 12345,\n  \"filterId\": 0,\n  \"contactlistId\": 12345678,\n  \"excludeFilterId\": 0,\n  \"excludeContactlistId\": 87654321\n}",
+    "desc": "You must set the **Recipient source** setting to **Using the API** in the Emarsys application to assign a segment or a contact list to an email campaign using the API.\n\nThe recipient source is filtered by the specified segment or contact list. To narrow the recipient list further, provide exclusion filters.\n\n**Important:** If you do not explicitly set any exclusion filters, all existing exclusions are removed from the campaign.\n\n**Warning:** The recipient source parameter can only be changed once if the previous value was set to **Using the API**."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Update an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/patch",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/patch",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "patch"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"emailId\": 100018233,\n  \"name\": \"asgardian_email\",\n  \"additional_linktracking_parameters\": \"\"\n}",
+    "desc": "Updates an email campaign with the specified parameters.\n\nEmail campaigns are locked during updates to prevent overlapping concurrent updates that may cause problems. A new update process can be started **only** after the one in progress has finished. You cannot make an update request while there is an on-going update. \n\n**Note:** Already launched campaigns cannot be modified.\n\n**Important:** This endpoint **does not** work with VCE campaigns. Updating VCE campaigns must be done through the UI."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Version an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/version",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/version",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "version"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"original_name\": \"Version A\",\n  \"new_name\": \"Version B\"\n}",
+    "desc": "Creates a new child version of the specified email campaign.\n\nVersioned campaigns are optimal for A/B testing, and can be manipulated as a separate email campaign through the API.\n\n**Tip:** List all versions of an email campaign with `root_campaign_id` filter on the [List email campaigns](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4Njg) endpoint."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Finalize a Multi-language Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/finalize",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/finalize",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "finalize"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "During A/B testing of multi-language campaigns, two versions are sent to contacts with the same mother tongue living in the same country. Once the A/B testing is completed, finalize the email campaign using this endpoint. Contacts in the specified countries will then receive the successful version in their own languages.\n\n**Note:** This endpoint is only available if the *Multi-language Email Campaigns* feature is enabled for your account. Contact Emarsys Support for details."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Copy an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/copy",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/copy",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "copy"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"name\": \"test\"\n}",
+    "desc": "Makes a copy of an email campaign, optionally with a new name."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / {email Id}",
+    "name": "Delete a Tracked Link in an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/:emailId/deletetrackedlinks/:linkId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:emailId/deletetrackedlinks/:linkId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":emailId",
+        "deletetrackedlinks",
+        ":linkId"
+      ],
+      "variable": [
+        {
+          "key": "emailId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the email campaign."
+        },
+        {
+          "key": "linkId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the tracked link.\n\n**Note:** If not provided, all links are deleted in the email campaign."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "**Note: This endpoint is deprecated and will be shut down in the near future. Please avoid using this endpoint in production.**\n\nDeletes a specific or all tracked links in an email campaign.\n\n**Note:** Provide the `linkId` path parameter to stop tracking a specific link.\n\n**Important**: This call only deletes the resources from the database, but no other modification is done in the campaign source. Further modifications must be done by the caller."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / Templates",
+    "name": "List Email Templates",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/templates",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns a list of all templates, including their names and identifiers.\n\n**Note**: This endpoint is not compatible with VCE (block-based) e-mail templates."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email / Templates",
+    "name": "Get an Email Template",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/templates/:templateId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/templates/:templateId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        "templates",
+        ":templateId"
+      ],
+      "variable": [
+        {
+          "key": "templateId",
+          "value": "81739474",
+          "description": "(Required) The template identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the data of an email template.\n\n**Note**: This endpoint is not compatible with VCE (block-based) e-mail templates."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Create an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email",
+    "url_obj": {},
+    "body_raw": "{\n  \"name\": \"be_afraid_email\",\n  \"administrator\": 112233,\n  \"language\": \"en\",\n  \"subject\": \"convergence\",\n  \"fromname\": \"Malekith\",\n  \"fromemail\": \"malekith@example.com\",\n  \"email_category\": \"111111111\",\n  \"html_source\": \"<html>Hello $First Name$...</html>\",\n  \"text_source\": \"Hello $First Name$...\",\n  \"browse\": 0,\n  \"text_only\": 0,\n  \"unsubscribe\": 1,\n  \"filter\": 222222222\n}",
+    "desc": "Creates an email campaign with the specified parameters.\n\n**Note:** For further information about creating emails with transaction-specific content, see Using the API to Create Triggered Messages and Capturing Transactional Content. For the list of possible campaign related placeholders, see [Email personalization placeholders](docs/personalization/email-personalization-placeholders-legacy.md).\n\n To disable the automatic link-tracking temporarily when creating an email campaign use `keep_raw_html` and `keep_raw_text` with the value of `1` in the call:\n  ```\n  \"keep_raw_html\": 1,\n \"keep_raw_text\": 1 \n  ``` \n"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "List Email Campaigns",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/?status=81739474&launched=0&contactlist=81739474&showdeleted=0&fromdate=8775-73-04&todate=8775-73-04&root_campaign_id=81739474&template=81739474&content_type=html&campaign_type=adhoc&parent_campaign_id=81739474&behavior_channel=transactional_email&email_category=81739474&is_rti=true",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/?status=81739474&launched=0&contactlist=81739474&showdeleted=0&fromdate=8775-73-04&todate=8775-73-04&root_campaign_id=81739474&template=81739474&content_type=html&campaign_type=adhoc&parent_campaign_id=81739474&behavior_channel=transactional_email&email_category=81739474&is_rti=true",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ""
+      ],
+      "query": [
+        {
+          "key": "status",
+          "value": "81739474",
+          "description": "The status of the campaign. See [Email status and error codes]([Email status and error codes](docs/personalization/email-status-and-error-codes.md)) for details."
+        },
+        {
+          "key": "launched",
+          "value": "0",
+          "description": "Filters campaigns by their launch status.\n\nSupported values:\n- *0*: Not launched\n- *1*: Launched"
+        },
+        {
+          "key": "contactlist",
+          "value": "81739474",
+          "description": "The identifier of the contact list. Set to *0* if no contact list is defined."
+        },
+        {
+          "key": "showdeleted",
+          "value": "0",
+          "description": "Filters deleted campaigns.\n\nSupported values:\n- *0*: Deleted campaigns are ignored\n- *1*: Lists deleted campaigns as well"
+        },
+        {
+          "key": "fromdate",
+          "value": "8775-73-04",
+          "description": "Lists campaigns created after the specified date. Date format: YYYY-MM-DD."
+        },
+        {
+          "key": "todate",
+          "value": "8775-73-04",
+          "description": "Lists campaigns created before the specified date. Date format: YYYY-MM-DD."
+        },
+        {
+          "key": "root_campaign_id",
+          "value": "81739474",
+          "description": "The identifier of the root campaign ID. Set to *0* if the campaign is not versioned."
+        },
+        {
+          "key": "template",
+          "value": "81739474",
+          "description": "The identifier of the template. Set to *0* if there is no template."
+        },
+        {
+          "key": "content_type",
+          "value": "html",
+          "description": "The type of the content.\n\n**Note:** Multiple values are allowed, separated by a comma without whitespace."
+        },
+        {
+          "key": "campaign_type",
+          "value": "adhoc",
+          "description": "The type of the campaign.\n\n**Note:** Multiple values are allowed, separated by a comma without whitespace."
+        },
+        {
+          "key": "parent_campaign_id",
+          "value": "81739474",
+          "description": "The identifier of the parent campaign. Set to *0* if the email campaign is not a recurring child campaign."
+        },
+        {
+          "key": "behavior_channel",
+          "value": "transactional_email",
+          "description": "The channel type."
+        },
+        {
+          "key": "email_category",
+          "value": "81739474",
+          "description": "The identifier of the campaign.\n\n**Note:**  Multiple values are allowed, separated by a comma without whitespace."
+        },
+        {
+          "key": "is_rti",
+          "value": "true",
+          "description": "Specifies whether the campaign supports Interactions.\n\n**Accepted values:** `true`, `false`"
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of existing email campaigns. Filter the results by specifying a campaign by its identifier, set a date range, or use other query parameters.\n\n**Note:** It is recommended to list campaigns in shorter date ranges when requesting a large amount of data."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Query Delivery Status",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/getdeliverystatus",
+    "url_obj": {},
+    "body_raw": "{\n  \"emailId\": 1234,\n  \"launchId\": 5678,\n  \"lastId\": 999,\n  \"allowNotFinished\": true\n}",
+    "desc": "Returns the delivery status of an email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Query Email Response Metrics and Deliverability",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/responses",
+    "url_obj": {},
+    "body_raw": "{\n  \"type\": \"clicked\",\n  \"start_date\": \"2017-12-01 00:00\",\n  \"end_date\": \"2018-04-01 00:00\",\n  \"campaign_id\": 5243\n}",
+    "desc": "Returns a list of contacts based on the requested response metrics or deliverability status. For example, it queries all contacts in the specified campaign who opened emails in the specified timeframe.\n\nFor more information about response metrics and deliverability, see [Email Response Metrics Explained](https://help.emarsys.com/hc/en-us/articles/115005132729).\n\n**Important:** This is an asynchronous operation, and may take a couple of minutes to complete. The request initiates a background job and returns an identifier. Start polling the [Get email response metric and deliverability results](reference/openapi.json/paths/~1v2~1email~1{queryId}~1responses/get) endpoint **within two minutes** using the returned query identifier for metrics and deliverability data.\n\n**Note:** This endpoint is rate limited and accepts only one request per minute.\n\n**Note:** The start and end date values added to the query respect the accounts' timezone. This means that account timezone is taken into account in the response data. \n\n**Important:** When specifying a period of certain days, use the zero hour of the day after the last one as an end date. One calendar day is the following:\n\n` \"start_date\": \"2021-06-19 00:00\" \n\"end_date\": \"2021-06-20 00:00\" `"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Get Email Response Metrics and Deliverability Results",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:queryId/responses",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:queryId/responses",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":queryId",
+        "responses"
+      ],
+      "variable": [
+        {
+          "key": "queryId",
+          "value": "81739474",
+          "description": "(Required) The query identifier initated on the [Query email response metrics and deliverability](reference/openapi.json/paths/~1v2~1email~1responses/post) endpoint."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of contacts requested on the [Query email response metrics and deliverability](reference/openapi.json/paths/~1v2~1email~1responses/post) endpoint.\n\nFor more information about response metrics and deliverability, see [Email Response Metrics Explained](https://help.emarsys.com/hc/en-us/articles/115005132729).\n\n**Note:** You must start polling this endpoint **within two minutes** from the initial request on the [Query email response metrics and deliverability](reference/openapi.json/paths/~1v2~1email~1responses/post) endpoint. The results are available for two hours after the initial query."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "List Email Campaign Launches",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/getlaunchesofemail",
+    "url_obj": {},
+    "body_raw": "{\n  \"emailId\": 1234\n}",
+    "desc": "Lists all launches of an email campaign, including the launch identifier, date, and status of each individual launch."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Unsubscribe a Contact from an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/unsubscribe",
+    "url_obj": {},
+    "body_raw": "{\n  \"launch_list_id\": 111111111,\n  \"email_id\": 222222222,\n  \"contact_uid\": \"0815abcd\"\n}",
+    "desc": "Registers an unsubscribe event to remove the specified contact from an email campaign. Think of this as merely registering a request, no other acion is taken, the removal is not done yet. Use the [Update contacts](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4MTE) endpoint to perform the actual unsubscibe."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Delete an Email Campaign",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/delete",
+    "url_obj": {},
+    "body_raw": "{\n  \"emailId\": 3456\n}",
+    "desc": "Deletes an email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "List AC Programs That Use an Email Campaign",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/email/:campaign_id/programs",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/email/:campaign_id/programs",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "email",
+        ":campaign_id",
+        "programs"
+      ],
+      "variable": [
+        {
+          "key": "campaign_id",
+          "value": "81739474",
+          "description": "(Required) The id of the campaign used by the AC programs you want to get."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of AC programs that use the specified email campaign."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Export a Contact List",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/getcontacts",
+    "url_obj": {},
+    "body_raw": "{\n  \"distribution_method\": \"ftp\",\n  \"contactlist\": -4537883,\n  \"contact_fields\": [\n    89690223\n  ],\n  \"delimiter\": \",\",\n  \"add_field_names_header\": 1,\n  \"language\": \"tj\",\n  \"ftp_settings\": {\n    \"host\": \"Excepteur ut in dolor\",\n    \"port\": \"sint consectetur laborum\",\n    \"username\": \"eu labore cillum\",\n    \"password\": \"commodo incididunt\",\n    \"folder\": \"ex officia dolore\"\n  },\n  \"distribution_email_address\": \"I62Vc68n18ha3xu@fFYWiNGZpTcvEPmkjdAvfbMdcGlpV.zy\",\n  \"notification_url\": \"dolore eiusmod\"\n}",
+    "desc": "Exports the specified fields of contacts from a contact list as a CSV file.\n\n**Important:** \n\nThe results are saved as a CSV file that you can access in multiple ways.\n- Exports flagged as `local` are stored on the Emarsys server that you can download via WebDAV or an API call.\n- Exports flagged as `ftp` can be accessed via FTP.\n- Exports flagged as `sftp` can be accessed via SFTP.\n- Exports flagged as `mail` are sent to the specified address when ready.\n\n**Implementation**\n\nou can implement this method as follows:\n- Poll the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) endpoint to track the export status. When done, access the file at the [Download Export Data](/reference/openapi.json/paths/~1v2~1export~1{exportId}~1data/get) endpoint.\n- Set the `notification_url` parameter to implement a callback mechanism. When the export is ready, a request is sent to the provided URL with the same payload as the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) response. Failures are retried 5 times, with a one-minute wait between each try.\n\n**Notes**\n- As we are using a proxy for FTP traffic, it is not necessary to whitelist any IPs on our side.\n- WebDAV access must be enabled first, and requires authentication to use. For a WebDAV account or (S)FTP access, contact Emarsys support.\n\n**Example**\n\n```csv\nFirst Name;Last Name;E-mail;Opt-in\nFname_1;Lname_1;testuser@example.com;True\nFname_2;Lname_2;testuser@example.com;True\nFname_3;Lname_3;testuser@example.com;True\nFname_4;Lname_4;testuser@example.com;True\n```\n\n> **Important:** Due to limitations of API specification languages, dynamic keys are not yet supported in query strings on the interactive demo page (**Try it out**). We are working on this issue.<br><br>**Tip:** You can use the [Postman Collection](https://raw.githubusercontent.com/emartech/developer-hub-public-assets/master/resources/EmarsysV2PostmanCollection.json) to test the endpoint."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Email",
+    "name": "Export Responses",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/email/getresponses",
+    "url_obj": {},
+    "body_raw": "{\n  \"distribution_method\": \"local\",\n  \"time_range\": [\n    \"nisi\",\n    \"reprehenderit qui do cupidatat dolor\"\n  ],\n  \"contact_fields\": [\n    88838427\n  ],\n  \"sources\": [\n    \"mail_open\",\n    \"mail_open\"\n  ],\n  \"analysis_fields\": [\n    -10834637,\n    -89999276\n  ],\n  \"email_id\": 54944412,\n  \"contactlist\": 33171046,\n  \"delimiter\": \",\",\n  \"add_field_names_header\": 1,\n  \"language\": \"aa\",\n  \"ftp_settings\": {\n    \"host\": \"http://CoFMKDjQtjaVpAwzqJhnSFLzzfWgkl.ihrpGWjf2+ODPLA7CjLvmEEn0TGPP7ImRj0lgHretnCheX\",\n    \"port\": \"et commodo\",\n    \"username\": \"dolor aliqua laborum et\",\n    \"password\": \"culpa ea mollit elit quis\",\n    \"folder\": \"dolore sit\"\n  },\n  \"notification_url\": \"https://TVmjngVMiVskYbQqv.skavOJ79J+yiQ8TjplNfLqenh-T\"\n}",
+    "desc": "Exports the specified fields of contacts who responded to an email within a certain time period as a CSV file.\n\n**Important:** \n\nThe results are saved as a CSV file that you can access in multiple ways.\n- Exports flagged as `local` are stored on the Emarsys server that you can download via WebDAV or an API call.\n- Exports flagged as `ftp` can be accessed via FTP.\n\n**Implementation**\n\nou can implement this method as follows:\n- Poll the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) endpoint to track the export status. When done, access the file at the [Download Export Data](/reference/openapi.json/paths/~1v2~1export~1{exportId}~1data/get) endpoint.\n- Set the `notification_url` parameter to implement a callback mechanism. When the export is ready, a request is sent to the provided URL with the same payload as the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) response. Failures are retried 5 times, with a one-minute wait between each try.\n\n**Notes**\n- As we are using a proxy for FTP traffic, it is not necessary to whitelist any IPs on our side.\n- WebDAV access must be enabled first, and requires authentication to use. For a WebDAV account or (S)FTP access, contact Emarsys support.\n\n**Example**\n\n```csv\nuser_id;First Name;Last Name;E-Mail;Campaign title;Link title;Url;source\n287705659;user3;test_import;test1@emarsys.com;VisualCMS_2015_04_09_10_05_03;;www.emarsys.com;click\n287705659;user3;test_import;test1@emarsys.com;RSS_2015_04_09_10_05_03;;www.google.com.com;click\n287705659;user3;test_import;test1@emarsys.com;AC_recurring_2015_04_09_10_05_03;;;open\n```"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event / {event Id}",
+    "name": "Query an External Event",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/event/:eventId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/event/:eventId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "event",
+        ":eventId"
+      ],
+      "variable": [
+        {
+          "key": "eventId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the external event."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the name of the external event specified by its identifier."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event / {event Id}",
+    "name": "Update an External Event",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/event/:eventId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/event/:eventId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "event",
+        ":eventId"
+      ],
+      "variable": [
+        {
+          "key": "eventId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the external event."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"name\": \"response_email\"\n}",
+    "desc": "Updates the name of an external event."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event / {event Id}",
+    "name": "List Uses of an External Event",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/event/:eventId/usages",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/event/:eventId/usages",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "event",
+        ":eventId",
+        "usages"
+      ],
+      "variable": [
+        {
+          "key": "eventId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the external event."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Lists the identifiers of the automation programs and emails that the specified external event triggers or is used in. Returns Automation Center and Interactions program identifiers and email identifiers.\n\n**Note:** Emails must be in the *launched* state in order to appear."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event / {event Id}",
+    "name": "Delete an External Event",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/event/:eventId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/event/:eventId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "event",
+        ":eventId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "eventId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the external event."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes an external event.\n\n**Note:** Deleting an event has no effect on any programs or email campaigns linked to the event."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event / {event Id}",
+    "name": "Trigger an External Event",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/event/:eventId/trigger",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/event/:eventId/trigger",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "event",
+        ":eventId",
+        "trigger"
+      ],
+      "variable": [
+        {
+          "key": "eventId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the external event."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"key_id\": \"veniam deserunt dolor dolor cupidatat\",\n  \"contacts\": [\n    {\n      \"attachment\": \"sint anim\"\n    },\n    {\n      \"event_time\": \"ipsum\",\n      \"attachment\": \"nostrud Duis\",\n      \"trigger_id\": \"cillum nostrud eu sit est\",\n      \"external_id\": \"eiusmod\"\n    }\n  ]\n}",
+    "desc": "Activates a named external event trigger for a specified contact.\n\n### NEW PARAMETER\n\nIn January 2021, a new parameter is introduced to this endpoint. If the `event_time` parameter is added to the request, it will be used as the time of event in [Interactions](https://help.emarsys.com/hc/en-us/articles/360003898918). The parameter has to be in one of the following formats: \n- 2007-03-01T13:00:00Z\n- 2007-03-01T13:00:00.000Z. \n\nIf the `event_time` is not provided, we will continue to use the time when the event was processed by Emarsys. If invalid `event_time` is provided (it is set, but not matching the above formats) an error will be provided and the event will not trigger either emails, Automation Center programs, or be used in Interactions.\n\nThe `event_time` parameter is checked at the same level as `trigger_id`, e.g. in the first level for single contact case and within the contacts array for the batch use case.\n\nFor more information on the new parameter, please contact Emarsys Support.\n\n### Prerequisites\n- If you synchronize your contact data using your own unique identifier in your system, a custom contact field `externalId` must exist as the external identifier. To create one, use the [Create a field](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4MTY) endpoint or go to **Admin** > **Field Editor** > **New** in the Emarsys application. For details on contact identifiers, see [Concepts](docs/before-you-start/concepts.md).\n>**Note:** Using external field identifiers is the recommended method for identifying contacts. However, you can use other Emasys system fields as well, such as email. For details, see [Contact system fields](docs/personalization/contact-system-fields.md).\n\n- The specified contact must exist in the Emarsys database to trigger an event.\n- The external event has been created using the API endpoint [Create an External Event](/reference/openapi.json/paths/~1v2~1event/post), or in the Emarsys application. See [Using External Events](https://help.emarsys.com/hc/en-us/articles/115004461489-triggered-email-end-user-guide#preparing-the-external-events) for details.\n- The field identifier is required to create contacts with custom fields. List the field identifiers at the [List available fields](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4MTc) endpoint or go to **Admin** > **Field Editor** in the Emarsys application.\n\n**Notes**\n\n- The maximum number of objects per request is 1000.\n- Do not use the `ems_event_time` key under `data` as this is reserved for internal use. Values sent with this key are **ignored**.\n- New to triggered emails? See [Triggered Email - Overview](https://help.emarsys.com/hc/en-us/articles/115004452105-Triggered-Email-Overview) for an introduction.\n- For further information about creating emails with transaction-specific content, see [Creating Transactional Emails](https://help.emarsys.com/hc/en-us/articles/115004090589#external_data_for_transactional_emails).\n- For the list of possible campaign-related placeholders, see [Email personalization placeholders](docs/personalization/email-personalization-placeholders-legacy.md).\n- An Interactions program will only be triggered if the size of event data for the given event is below 20kB. Events above this limit can still trigger AC programs or emails.\n\n### Payload Structure\n\nYou can trigger an event in different ways as a single or batch request, depending on the content of the email.\n- Global variables are accessible in the entire content of the email, and useful for defining general properties, such the as name of your customer.\n- The scope of section variables are limited to the defined section group. Each section variable in the group adds a copy of the referenced content.\n- [Emarsys Scripting Language](https://help.emarsys.com/hc/en-us/articles/115004090589-Emarsys-Scripting-Language) (ESL) variables allow you to define custom content, but not compatible with section groups.\n\nThe `data` element of the payload contains the variables of the mail, as follows:\n\n| Variable Type | Description | Restrictions |\n| --- | --- | ---\n| global | Contains variables of global scope of the email. | Applies to all variants. |\n| {section_group_name} | Contains variables of the named section group. | Can be paired with global variables, but mutually exclusive with ESL variables. |\n| {twig_variable} | Contains ESL variables. | Can be paired with global variables, but mutually exclusive with section variables. |\n\nThe payload structure also depends on whether the request is a single or batch call. The following examples show all variants.\n\n**Note:** The definition below and the interactive demo feature illustrates a batch call.\n\n<!--\ntype: tab\ntitle: Single-Section Variables\n-->\n\n```json\n {\n\"key_id\": 3,\n\"external_id\": \"test@example.com\",\n\"trigger_id\": \"trigger-id-1\",\n\"data\": {\n    \"section_group1\": [\n        {\n        \"section_variable1\": \"some_value\",\n        \"section_variable2\": \"another_value\"\n        },\n        {\n        \"section_variable1\": \"yet_another_value\",\n        \"section_variable2\": \"one_more_value\"\n        }\n      ],\n\"global\": {\n    \"global_variable1\": \"global_value\",\n    \"global_variable2\": \"another_global_value\"\n    }\n  },\n\"attachment\": [\n    {\n    \"filename\": \"example.pdf\",\n    \"data\": \"ZXhhbXBsZQo=\"\n    }\n  ]\n}\n```\n<!--\ntype: tab\ntitle: Single - ESL\n-->\n```json\n{\n    \"key_id\": 3,\n    \"external_id\": \"test@example.com\",\n    \"trigger_id\": \"trigger-id-1\",\n    \"data\": {\n        \"global\": {\n            \"global_variable1\": \"global_value\",\n            \"global_variable2\": \"another_global_value\"\n        },\n        \"twig_variable1\": \"first_value\",\n        \"twig_variable2\": \"another_value\"\n    },\n    \"attachment\": [\n        {\n            \"filename\": \"example.pdf\",\n            \"data\": \"ZXhhbXBsZQo=\" \n        }\n    ]\n}\n```\n<!--\ntype: tab\ntitle: Batch - Section variables\n-->\n```json\n{\n    \"key_id\": 3,\n    \"contacts\": [\n        {\n            \"external_id\":\n            \"test@example.com\",\n            \"trigger_id\": \"trigger-id-2\",\n            \"data\": {\n              \"section_group1\": [\n                {\n                  \"section_variable1\": \"some_value\",\n                  \"section_variable2\": \"another_value\"\n                },\n                {\n                  \"section_variable1\": \"yet_another_value\",\n                  \"section_variable2\": \"one_more_value\"\n                }\n              ],\n              \"global\": {\n                \"global_variable1\": \"global_value\",\n                \"global_variable2\": \"another_global_value\"\n              }\n            },\n            \"attachment\": [\n        {\n            \"filename\": \"example.pdf\",\n            \"data\": \"ZXhhbXBsZQo=\" \n        }\n    ]\n        }\n    ]\n}\n```\n<!--\ntype: tab\ntitle: Batch - ESL\n-->\n```json\n{\n    \"key_id\": 3,\n    \"contacts\": [\n        {\n            \"external_id\":\n            \"test@example.com\",\n            \"trigger_id\": \"trigger-id-1\",\n            \"data\": {\n              \"global\": {\n                \"global_variable1\": \"global_value\",\n                \"global_variable2\": \"another_global_value\"\n            },\n            \"twig_variable1\": \"first_value\",\n            \"twig_variable2\": \"another_value\"\n            },\n            \"attachment\": [\n        {\n            \"filename\": \"example.pdf\",\n            \"data\": \"ZXhhbXBsZQo=\" \n        }\n    ]\n        }\n    ]\n}\n```\n<!-- type: tab-end -->\nThere are four types of `200 OK` messages we return, depending on whether Interactions advanced features are enabled, and whether the request is a single or a batch call. The four versions differ in what is included in the \"data\" object. \n\nThe following table summarizes how the possible `200 OK` versions differ based on the scenario in which they are sent:\n\n|                        | **Interactions advanced features <span style=\"color: red;\">not enabled</span>**             | **Interactions advanced features <span style=\"color: green;\">enabled</span>**                          |\n| ---------------------- | ------------------------ | ------------------------------------ |\n| **Single contact trigger** | { } - `200(a)`        | {<span style=\"color: green;\">\"connectedTo\"</span>} - `200(c)`                |\n| **<span style=\"color: purple;\">Batch</span> contact trigger**  | {<span style=\"color: purple;\">\"ids\"</span>,<span style=\"color: purple;\">\"errors\"</span>} - `200(b)` | {<span style=\"color: purple;\">\"ids\"</span>,<span style=\"color: purple;\">\"errors\"</span>,<span style=\"color: green;\">\"connectedTo\"</span>} - `200(d)` |\n\nYou can find an example for each version (`a`, `b`, `c`, `d`) at the end of this section.\n\nFor customers who have Interactions advanced features enabled, this endpoint returns a `200 OK` response even if the event is not configured to trigger an automated program or an email campaign launch (e.g. the AC program it was linked to has been deleted). In the response body, it is indicated whether any automated programs (AC or Interactions) or email campaigns are connected to the event. Customers who do not have Interactions advanced features enabled get a `400` error in such scenarios: `No program or campaign is triggered.`\n\nIf event data is above the limit of 20kB for the Interactions program, a warning will will inform you of the event not being valid for Interactions under `warnings`.\n\n>**IMPORTANT:**  As of September, 2020, every Emarsys customer will get a `200 OK` response regardless of whether automated programs or email campaigns have been triggered by the event. The `400` error `No program or campaign is triggered` will not be used by Emarsys. \n\n\n### Checking Results\nThere are two ways to check if the program was successfully triggered:\n- In the Emarsys application, go to the **Analysis** page of the program and verify that the number of sent emails has increased.\n- Include a test customer in the contact list and check if it receives the relevant email.\n\n\n### Example Use Case\n\nWhen a customer clicks the ***I want to learn more about this product*** button in your webshop, call this endpoint to trigger the associated program, which sends out more information about your product.\n\nFor more use cases, see:\n\n<html>\n  <a href=\"https://dev.emarsys.com/v2/email-use-cases/send-batch-emails\" class=\"block-link\">\n    <p>Send Batch Emails</p>\n  </a>\n</html>\n\n<html>\n  <a href=\"https://dev.emarsys.com/v2/email-use-cases/personalize-your-email-with-placeholders\" class=\"block-link\">\n    <p>Personalize Your Email with Placeholders</p>\n  </a>\n</html>\n<br/>"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event",
+    "name": "Create an External Event",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/event",
+    "url_obj": {},
+    "body_raw": "{\n  \"name\": \"bulk purchasing\"\n}",
+    "desc": "Creates an external event with the specified name in order to allow your external program, such as a CMS or CRM to trigger an Emarsys event."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Event",
+    "name": "List External Events",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/event/",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Lists external event names and identifiers. Use the returned identifiers to trigger emails or programs."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Export / {export Id}",
+    "name": "Check Export Status",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/export/:exportId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/export/:exportId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "export",
+        ":exportId"
+      ],
+      "variable": [
+        {
+          "key": "exportId",
+          "value": "81739474",
+          "description": "(Required) The export identifier returned at the [Export Updated Contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post) endpoint."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns information about an export, including its status, type, and output settings.\n\n**Important:** In the exports, the created column is in Vienna timezone. Vienna timezone is UTC+2 in summertime but with Daylight Saving in wintertime it changes to UTC+1). Bear in mind that UTC does not observe Daylight Saving Time (unlike GMT).\n\n**Note:** This endpoint tracks the status of an asynchronous operation using a job identifier. You can initiate an export job and get the identifier at the following endpoints:\n- [Export Updated Contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post)\n- [Export a Contact List](/reference/openapi.json/paths/~1v2~1email~1getcontacts/post)\n- [Export a Segment](/reference/openapi.json/paths/~1v2~1export~1filter/post)\n- [Export Responses](/reference/openapi.json/paths/~1v2~1email~1getresponses/post)"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Export / {export Id}",
+    "name": "Download Export Data",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/export/:exportId/data?offset=0&limit=10000000",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/export/:exportId/data?offset=0&limit=10000000",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "export",
+        ":exportId",
+        "data"
+      ],
+      "query": [
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "Specifies an offset for pagination. The offset of the first record is *0*."
+        },
+        {
+          "key": "limit",
+          "value": "10000000",
+          "description": "Specifies the maximum number of records to return."
+        }
+      ],
+      "variable": [
+        {
+          "key": "exportId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the export job initiated at the [Export Updated Contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post) endpoint."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a CSV file once the export job is finished. You must set the distribution method to `local` when initiating an export job at the following endpoints:\n- [Export Updated Contacts](/reference/openapi.json/paths/~1v2~1contact~1getchanges/post)\n- [Export a Contact List](/reference/openapi.json/paths/~1v2~1email~1getcontacts/post)\n- [Export a Segment](/reference/openapi.json/paths/~1v2~1export~1filter/post)\n\n**Note:** It is recommended to use FTP or WebDAV to access exports. For configuration options, contact Emarsys support.\n\n**Important:** This endpoint returns a file instead of JSON. The *Content-Type* of the response is `text/csv;charset=UTF-8`."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Export",
+    "name": "Export a Segment",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/export/filter",
+    "url_obj": {},
+    "body_raw": "{\n  \"distribution_method\": \"local\",\n  \"filter\": -69356423,\n  \"contact_fields\": [\n    -26126550\n  ],\n  \"delimiter\": \",\",\n  \"add_field_names_header\": 1,\n  \"language\": \"bk\",\n  \"ftp_settings\": {\n    \"host\": \"ut\",\n    \"port\": \"mollit\",\n    \"username\": \"proident\",\n    \"password\": \"tempor Excepteur\",\n    \"folder\": \"quis non esse\"\n  },\n  \"distribution_email_address\": \"EPU3QixTLS16kj0@EntXQPiDTmaxDYfJoEzFqoPljAPQujbpm.nfx\",\n  \"notification_url\": \"pariatur minim reprehenderit enim\"\n}",
+    "desc": "Exports the specified fields of contacts from a segment as a CSV file.\n\n**Important:** \n\nThe results are saved as a CSV file that you can access in multiple ways.\n- Exports flagged as `local` are stored on the Emarsys server that you can download via WebDAV or an API call.\n- Exports flagged as `ftp` can be accessed via FTP.\n- Exports flagged as `sftp` can be accessed via SFTP.\n- Exports flagged as `mail` are sent to the specified address when ready.\n\n**Implementation**\n\nou can implement this method as follows:\n- Poll the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) endpoint to track the export status. When done, access the file at the [Download Export Data](/reference/openapi.json/paths/~1v2~1export~1{exportId}~1data/get) endpoint.\n- Set the `notification_url` parameter to implement a callback mechanism. When the export is ready, a request is sent to the provided URL with the same payload as the [Check Export Status](/reference/openapi.json/paths/~1v2~1export~1{exportId}/get) response. Failures are retried 5 times, with a one-minute wait between each try.\n\n**Notes**\n- As we are using a proxy for FTP traffic, it is not necessary to whitelist any IPs on our side.\n- WebDAV access must be enabled first, and requires authentication to use. For a WebDAV account or (S)FTP access, contact Emarsys support.\n\n**Example**\n\nAn example contact list export including first name, last name, email address and opt-in status results in the following CSV:\n```csv\nFirst Name;Last Name;E-mail;Opt-in\nFname_1;Lname_1;testuser@example.com;True\nFname_2;Lname_2;testuser@example.com;True\nFname_3;Lname_3;testuser@example.com;True\nFname_4;Lname_4;testuser@example.com;True\n```"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / External content",
+    "name": "Request External Content for Personalization",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/https://:customer-website.com/api/example/",
+    "url_obj": {},
+    "body_raw": "{\n  \"parameters\": [\n    {\n      \"{reference-field-1}\": \"exercitation fugiat ipsum pariatur\",\n      \"{reference-value-1_N}\": \"eu do sit\",\n      \"{reference-field-2}\": \"fugiat voluptate qui labore\",\n      \"{reference-value-2_N}\": \"culpa sit laborum deserunt commodo\"\n    },\n    {\n      \"{reference-field-1}\": \"ullamco\",\n      \"{reference-value-1_N}\": \"ut qui sed\",\n      \"{reference-field-2}\": \"enim\",\n      \"{reference-value-2_N}\": \"dolor mollit consectetur\"\n    }\n  ],\n  \"fields\": [\n    \"uA6EZ\",\n    \"f\"\n  ],\n  \"limit\": 82128321\n}",
+    "desc": "### Basics\n\nWith External Content, you can use your own API to personalize content in your messages.\n\nIn this scenario, Emarsys calls your API by sending a POST request.\n\nIn the following example, we are going to request information that is not present in the Emarsys Database.\n\n\nImagine that the following attributes (key-value pairs) describe a specific record in your database:\n- **email=john@example.com**\n- **external_id=90210**\n- *title=Footbal shirt*\n- *price=100*\n- *image_url=https://example.com/images/football-shirt.png*\n\nIn the Emarsys Database, only the first two: **email=john@example.com** and **external_id=90210** are available. (The purchase history of this contact is stored in your database only.)\n\n\n#### Request logic and contents\n\n\"*For records where **email=john@example.com** and **external_id=90210**, return the values for **title**, **price**, and **image_url**, requesting a maximum of <**limit**> number of content objects per reference field.*\"\n\n***parameters*** (reference fields):\n- *email=john@example.com*\n- *external_id=90210*\n\n***fields*** (response fields, the keys we expect values for):\n\n- *title*\n- *price*\n- *image_url*\n\n***limit*** (for the returned content per reference field)\n\n___\n\n#### Response contents\n\n***content***:\n- *email=john@example.com*\n- *external_id=90210*\n- *title=Football shirt*\n- *price=100*\n- *image_url=https://example.com/images/football-shirt.png*\n---\n\n### Request\n\n<dl>\n  <dt>parameters</dt>\n  <dd>\n  \n  - This array lists the preconfigured *reference fields* and their values.</dd>\n  <dt>fields</dt>\n  <dd>\n  \n  - This array lists  the expected response fields configured on the UI.</dd>\n  <dt>limit</dt>\n  <dd>\n  \n  - Indicates how many personalization values we expect to get for each contact from your API (if there are multiple values for the same response field).\n  \n  \n  - Value automatically calculated value during the personalization process (based on your e-mail template). For example, if your system calculates a product recommendation and you use 3 recommendations, the limit value is automatically set to 3.</dd>\n  \n\n**NOTE**: Basic HTTP authentication and OAuth2 are supported.\n\n**IMPORTANT**:\nThe request will always be in batch and can contain up to 1000 contacts (maximum 100 paralelly at a time per host).\n\n***Request structure***\n\n```\n{\n\t\"parameters\": [\n\t\t{\n\t\t\t\"<reference-field-1>\": \"<reference-value-1_1>\",\n\t\t\t\"<reference-field-2>\": \"<reference-value-2_1>,\"\n\t\t\t...\n\t\t},\n\t\t{\n\t\t\t\"<reference-field-1>\": \"<reference-value-1_2>\",\n\t\t\t\"<reference-field-2>\": \"<reference-value-2_2>\",\n\t\t\t...\n\t\t},\n\t\t...\n\t],\n\t\"fields\": [\n\t\t\"<response-field-1>\",\n\t\t\"<response-field-2>\",\n\t\t...\n\t],\n\t\"limit\": <automatically-calculated-limit>\n}\n```\n\n\n***Request example***\n\n```\n{\n\t\"parameters\": [\n\t\t{\n\t\t\t\"email\": \"john@example.com\",\n\t\t\t\"external_id\": \"92010\"\n\t\t},\n\t\t{\n\t\t\t\"email\": \"jane@example.com\",\n\t\t\t\"external_id\": \"21235\"\n\t\t}\n\t],\n\t\"fields\": [\n\t\t\"title\",\n\t\t\"price\",\n\t\t\"img_url\"\n\t],\n\t\"limit\": 3\n}\n```\n\n---\n\n### Response\n\nThe response must contain a **content** array, which contains all personalization data. Every object in the array must belong to a contact.\n\n- Maximum response body size: *2MB*\n- Supported response type:\n*gzip-encoded* (suggested)\n\n**IMPORTANT**\n\n- Nested objects and arrays placed inside the content objects are considered as a syntactical error, resulting in the whole response being discarded. \n- Response fields that were not specified on the configuration screen will be discarded. The same happens if you exceed the number per contact (per reference field) set in **limit**.\n\n***Response structure***\n```\n{\n\t\"content\": [\n\t\t{\n\t\t\t\"<reference-field-1>\": \"<reference-value-1_1>\",\n\t\t\t\"<reference-field-2>\": \"<reference-value-2_1>\",\n\t\t\t...\n\t\t\t\"<response-field-1>\": \"<response-value-1_1>\",\n\t\t\t\"<response-field-2>\": \"<response-value-2_1>\",\n\t\t\t...\n\t\t},\n\t\t{\n\t\t\t\"<reference-field-1>\": \"<reference-value-1_2>\",\n\t\t\t\"<reference-field-2>\": \"<reference-value-2_2>\",\n\t\t\t...\n\t\t\t\"<response-field-1>\": \"<response-value-1_2>\",\n\t\t\t\"<response-field-2>\": \"<response-value-2_2>\",\n\t\t\t...\n\t\t},\n\t\t...\n\t],\n}\n```\n\n***Response example***\n\n```\n{\n\t\"content\": [\n\t\t{\n\t\t\t\"email\": \"john@example.com\",\n\t\t\t\"external_id\": \"90210\"\n\t\t\t\"title\": \"Football shirt\",\n\t\t\t\"price\": 100,\n\t\t\t\"img_url\": \"https://example.com/images/football-shirt.png\"\n\t\t},\n\t\t{\n\t\t\t\"email\": \"jane@example.com\",\n\t\t\t\"external_id\": \"21235\"\n\t\t\t\"title\": \"Bicycle\",\n\t\t\t\"price\": 120,\n\t\t\t\"img_url\": \"https://example.com/images/bicycle.png\"\n\t\t},\n\t\t{\n\t\t\t\"email\": \"bill@example.com\",\n\t\t\t\"external_id\": \"42469\"\n\t\t\t\"title\": \"Baseball cap\",\n\t\t\t\"price\": 50,\n\t\t\t\"img_url\": \"https://example.com/images/baseball-cap.png\"\n\t\t}\n\t]\n}\n```\n\n---\n\n### Error handling\n\nIf External Content doesn't receive a preconfigured response field, we will treat it as missing personalization.\n\nUpon receiving a request from Emarsys via External Content, if you cannot send back the personalized content, do not send back any content about the contact that cannot be personalized.\n\n**Blocking errors**\n\nSome errors may result in paused or aborted Automation Center (AC) or Real Time Interaction (RTI) campaigns.\n\nAC and RTI programs using personalization tokens built with External Content are paused or aborted in the following cases:\n\n- Any of the requests fails with a 4xx status code, except for 429 or 408;\n- The response body is not a valid JSON document;\n- The response format violates the  requirements;\n- The response body contains insufficient data (not all parameters/ reference fields are echoed back in the content items), as in the following example:\n\n\nRequest body:\n```\n{\n   \"parameters\": [\n       {\n           \"email\": \"aaa@example.com\",\n           \"UID\": \"1234\"\n       }\n   ],\n   \"fields\": [\n       \"img_url\"\n   ],\n   \"limit\": 1\n}\n```\n**Incorrect** response body (the UID parameter is missing):\n```\n{\n   \"content\": [\n       {\n           \"email\": \"aaa@example.com\",\n           \"img_url\": \"https://example.com/images/example.png\"\n       }\n   ]\n}\n```\n\n**Retrying requests**\n\nIf there are no blocking errors, the requests will be retried. Examples include:\n\n-\tthe configured endpoint is unreachable;\n-\tthe request times out;\n-\tthe status code is 5xx (server error);\n-\tthe status code is 429 (too many requests);\n-\tthe status code is 408.\n\nYou can find the comprehensive list of all Emarsys error codes in [Response codes](docs/response-codes/error-codes.md)."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Field",
+    "name": "Create a Field",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/field",
+    "url_obj": {},
+    "body_raw": "{\n  \"name\": \"The name of the new field\",\n  \"application_type\": \"shorttext\"\n}",
+    "desc": "Creates a new field in the contact database. Please note that you cannot create single- or multi-choice fields via the API, nor can you create more than one field at a time.\n\n**Note:** The endpoint replicates the functionality of the **Field Generator** in the Emarsys application. To manage fields, go to **Admin** > **Field Editor** > **New**."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Field",
+    "name": "List Available Fields",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/field/translate/:languageId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/field/translate/:languageId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "field",
+        "translate",
+        ":languageId"
+      ],
+      "variable": [
+        {
+          "key": "languageId",
+          "value": "en",
+          "description": "(Required) The two-letter ISO 639-1 language code. See available [language codes](docs/appendix/language-codes.md).\n\n**Note:** Using the `/field` URI without the `translate/{languageId}` path returns the default English fields."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Generates a list of the available contact fields."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Field",
+    "name": "List Available Choices of a Single-choice Field",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/field/:fieldID/choice/translate/:languageId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/field/:fieldID/choice/translate/:languageId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "field",
+        ":fieldID",
+        "choice",
+        "translate",
+        ":languageId"
+      ],
+      "variable": [
+        {
+          "key": "fieldID",
+          "value": "81739474",
+          "description": "(Required) The field identifier."
+        },
+        {
+          "key": "languageId",
+          "value": "en",
+          "description": "(Required) The two-letter ISO 639-1 language code. See available [language codes](docs/appendix/language-codes.md).\n\n**Note:** Using the `/field/{fieldId}/choice` URI without the `translate/{languageId}` path returns the default English fields."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Generates a list of all available options for any given single- or multi-choice field.\n\n**Tip**:  See [List customer forms](/reference/openapi.json/paths/~1v2~1form/get) for how to list forms and newsletters."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Field",
+    "name": "List Available Choices of a Multiple-choice Field",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/field/choices?fields=81739474&language=en",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/field/choices?fields=81739474&language=en",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "field",
+        "choices"
+      ],
+      "query": [
+        {
+          "key": "fields",
+          "value": "81739474",
+          "description": "(Required) The field identifier."
+        },
+        {
+          "key": "language",
+          "value": "en",
+          "description": "(Required) The two-letter ISO 639-1 language code. For available language codes, see [Language codes](docs/appendix/language-codes.md).\n\n**Note:** Using the `/field/{fieldId}/choice` URI without the `translate/{languageId}` path returns the default English fields."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Generates a list of all available options for the specified multi-choice field.\n\n**Tip**:  See [List customer forms](/reference/openapi.json/paths/~1v2~1form/get) for how to list forms and newsletters."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Field",
+    "name": "Delete a Field",
+    "method": "DELETE",
+    "raw_url": "{{baseUrl}}/v2/field/:fieldId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/field/:fieldId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "field",
+        ":fieldId"
+      ],
+      "variable": [
+        {
+          "key": "fieldId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the field to be deleted."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes a custom contact field.\n\n**Important:** This action cannot be reverted, and removes all existing contact data associated with the field."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id} / contact criteria",
+    "name": "Update Contact Criteria in a Segment",
+    "method": "PUT",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/contact_criteria",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/contact_criteria",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "contact_criteria"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "81739474",
+          "description": "(Required) The segment identifier.\n\n**Note:** The identifier must not be *0*."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"type\": \"and\",\n  \"children\": [\n    {\n      \"type\": \"criteria\",\n      \"field\": \"gender\",\n      \"operator\": \"equals\",\n      \"value\": \"female\"\n    },\n    {\n      \"type\": \"criteria\",\n      \"field\": \"age\",\n      \"operator\": \"greater_or_equal\",\n      \"value\": \"22\"\n    }\n  ]\n}",
+    "desc": "Updates the contact criteria of a specific segment.\n\nFor details on how the response body is structured, see [Create a segment](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NDY) endpoint."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id} / contact criteria",
+    "name": "Get Segment Contact Criteria",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/contact_criteria",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/contact_criteria",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "contact_criteria"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "81739474",
+          "description": "(Required) The segment identifier.\n\n**Note:** The identifier must not be *0*."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the contact criteria for the specified segment.\n\nFor details on how the response body is structured, see [Create a segment](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NDY) endpoint."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id} / contacts",
+    "name": "Count Contacts in a Segment",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/contacts/count",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/contacts/count",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "contacts",
+        "count"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "81739474",
+          "description": "(Required) The segment identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Provides the number of contacts in the specified segment.\n\n**Note:** This endpoint does not return data immediately because it requires further processing."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id} / contacts",
+    "name": "Look Up a Contact in a Segment",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/contacts/:contactId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/contacts/:contactId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "contacts",
+        ":contactId"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "81739474",
+          "description": "(Required) The segment identifier."
+        },
+        {
+          "key": "contactId",
+          "value": "81739474",
+          "description": "(Required) The contact identifier (`id`)."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Looks up a specific contact in a segment. If the segment includes the contact, returns `true`, otherwise returns `false`."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id}",
+    "name": "List Segments",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the segment. If provided, returns the details of the specified only."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Generates a list of segments."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id}",
+    "name": "Delete a Segment",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "81739474",
+          "description": "(Required) The segment identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": ""
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id}",
+    "name": "Run a Segment for a Single Contact",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/single_runs?contact_id=-24187902.757311657",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/single_runs?contact_id=-24187902.757311657",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "single_runs"
+      ],
+      "query": [
+        {
+          "key": "contact_id",
+          "value": "-24187902.757311657",
+          "description": "Checks whether the contact specified by its internal identifier is included in the segment. Use the [List Contact Data](reference/openapi.json/paths/~1v2~1contact~1query~1/get) or the [Get Internal Contact Identifiers](/reference/openapi.json/paths/~1v2~1contact~1query~1{keyId}={keyValue}/get) endpoint to get the internal identifier."
+        }
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the segment to run. Use the [List segments](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NDk) endpoint to get the identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Checks whether the specified contact is included in a segment and starts the segment running process.\n\n**Important:** Depending on the composition of the segment, the running time may take hours. Use the [Poll the status of a segment run for a single contact](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NTk) endpoint to check the status."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter / {segment Id}",
+    "name": "Run a Segment for Multiple Contacts",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/filter/:segmentId/runs",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/:segmentId/runs",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        ":segmentId",
+        "runs"
+      ],
+      "variable": [
+        {
+          "key": "segmentId",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the segment to run. Use the [List segments](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NDk) endpoint to get the identifier."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Starts the segment calculation process and returns information on the included contacts.\n\n**Important:** Depending on the composition of the segment, the running time may take hours. Use the [Poll the Status of a Segment Run for Multiple Contacts](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NjE) endpoint to check the status."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter",
+    "name": "Create a Segment",
+    "method": "PUT",
+    "raw_url": "{{baseUrl}}/v2/filter",
+    "url_obj": {},
+    "body_raw": "{\n  \"name\": \"summer_sale\",\n  \"description\": \"gender_based\",\n  \"baseContactListId\": \"123456\",\n  \"contactCriteria\": {\n    \"type\": \"and\",\n    \"children\": [\n      {\n        \"type\": \"criteria\",\n        \"field\": \"gender\",\n        \"operator\": \"equals\",\n        \"value\": \"male\"\n      },\n      {\n        \"type\": \"and\",\n        \"children\": [\n          {\n            \"type\": \"and\",\n            \"children\": [\n              {\n                \"type\": \"criteria\",\n                \"field\": \"email\",\n                \"operator\": \"not_empty\",\n                \"value\": \"is_not_empty\"\n              },\n              {\n                \"type\": \"criteria\",\n                \"field\": \"email\",\n                \"operator\": \"contains\",\n                \"value\": \"@gmail.com\"\n              },\n              {\n                \"type\": \"criteria\",\n                \"field\": \"email_valid\",\n                \"operator\": \"equals\",\n                \"value\": \"true\"\n              },\n              {\n                \"type\": \"criteria\",\n                \"field\": \"optin\",\n                \"operator\": \"equals\",\n                \"value\": \"true\"\n              },\n              {\n                \"criteria\": \"response_open_click\",\n                \"type\": \"criteria\",\n                \"time_restriction\": \"between_dates\",\n                \"from_date\": \"2016-08-26\",\n                \"to_date\": \"2016-08-31\"\n              },\n              {\n                \"criteria\": \"response_click\",\n                \"type\": \"criteria\",\n                \"time_restriction\": \"between_days\",\n                \"from_day\": \"0\",\n                \"to_day\": \"3\"\n              },\n              {\n                \"criteria\": \"bounce\",\n                \"type\": \"criteria\",\n                \"time_restriction\": \"last_days\",\n                \"from_day\": \"0\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+    "desc": "Creates a segment based on the specified contact and email behavior criteria.\n\n### Overview\nCritera are represented as JSON object nodes in the request body. The relationship between the nodes is defined by the following:\n- Grouping operators link filter conditions with a logical AND or OR operator using the `type` property.\n- The node hierarchy correspond to the structure of the filters.\n\nFor easier understanding of the nested contact criteria, see the configuration of filter conditions in the Emarsys application:\n\n![Filter conditions in the Emarsys application](https://raw.githubusercontent.com/emartech/developer-hub-public-assets/master/assets/images/filter-conditions.png \"Filter conditions in the Emarsys application\")\n\n### Node Structure\nNodes can either be conjunctive or a criteria nodes. The function of each node is defined in the `type` property.\n- **Conjunctive nodes:** Nodes with a grouping operator `and` or `or` establish the relationship between parent and children nodes, and do not have any other property.\n- **Criteria nodes:** Nodes with the `criteria` property define a filter condition.\n\n| Criterion Type | Mandatory Properties | Optional Properties |\n| --- | --- | --- |\n| Contact criteria | - field<br>- operator<br>- value ||\n| Behavior criteria | - criteria | - time_restriction |\n\n**Important:**\n- Either one contact or behavior criteria must be specified in the request.\n- Nested nodes are specified in a `children` array of the JSON payload. See the Request Body section for details.\n\n**Note:** Mobile behavior, geolocation, and Smart Insight criteria are not supported using the API at the moment."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter",
+    "name": "Poll the Status of a Segment Run for a Single Contact",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/single_runs/:runId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/single_runs/:runId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        "single_runs",
+        ":runId"
+      ],
+      "variable": [
+        {
+          "key": "runId",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the segment run. Get this identifier on the [Run a segment for a single contact](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NTg) endpoint to start the segment caclulation process."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Poll this endpoint to check the status of a started segment run of a single contact. Once the process is completed, returns whether the specified contact is included in the segment.\n \n **Note:** Use the [Run a segment for a single contact](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NTg) endpoint to initiate the segment run and specify the contact."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Filter",
+    "name": "Poll the Status of a Segment Run for Multiple Contacts",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/filter/runs/:runId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/filter/runs/:runId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "filter",
+        "runs",
+        ":runId"
+      ],
+      "variable": [
+        {
+          "key": "runId",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the segment run. Get this identifier on the [Run a Segment for Multiple Contacts](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NjE) endpoint to start the segment caclulation process."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Poll this endpoint to check the status of a started segment run of multiple contacts. Once the process is completed, returns information on the contacts included in the segment.\n \n **Note:** Use the [Run a Segment for Multiple Contacts](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4NjA-run-a-segment-for-multiple-contacts) endpoint to initiate the segment run.\n \n **Note:** The contact list created as a result of the segment run is available for at least 12 hours. You can find its ID in the response: `contact_list_id`."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Form",
+    "name": "List Customer Forms",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/form",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Generates a list of all available forms designed to collect data from contacts, such as registration forms in a web page."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Form",
+    "name": "Trigger Contact Registration",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/form/:formId/trigger",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/form/:formId/trigger",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "form",
+        ":formId",
+        "trigger"
+      ],
+      "variable": [
+        {
+          "key": "formId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the form as the source of registration."
+        }
+      ]
+    },
+    "body_raw": "{\n  \"key_id\": \"3\",\n  \"external_id\": \"mycontact@example.com\"\n}",
+    "desc": "Registers a contact in a form and triggers assigned campaigns. For details on the functionality, see [New Contact Registrations](https://help.emarsys.com/hc/en-us/articles/115005198989-New-Contact-Registrations)."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Keys and keyring",
+    "name": "List Keys in the Keyring",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/keyring/keys",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Lists all keys in the keyring for SFTP key-based authentication.\n\n**Note:** This feature is in the pilot phase and currently available for a limited number of clients only. If you are interested in participating, contact Emarsys support.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Keys and keyring",
+    "name": "Create a Key in the Keyring",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/settings/keyrings",
+    "url_obj": {},
+    "body_raw": "{\n  \"comment\": \"key_0\"\n}",
+    "desc": "Creates and returns a new key in the keyring for SFTP key-based authentication.\n\n**Note:** This feature is in the pilot phase and currently available for a limited number of clients only. If you are interested in participating, contact Emarsys support.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Keys and keyring",
+    "name": "Retrieve a Key from the Keyring",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/settings/keyring/keys/:keyId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/settings/keyring/keys/:keyId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "settings",
+        "keyring",
+        "keys",
+        ":keyId"
+      ],
+      "variable": [
+        {
+          "key": "keyId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the key."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a key from the keyring for SFTP key-based authentication.\n\n**Note:** This feature is in the pilot phase and currently available for a limited number of clients only. If you are interested in participating, contact Emarsys support.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Keys and keyring",
+    "name": "Delete a Key from the Keyring",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/keyring/keys/:keyId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/keyring/keys/:keyId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "keyring",
+        "keys",
+        ":keyId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "keyId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the key."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes a single key from the keyring.\n\n**Note:** This feature is in the pilot phase and currently available for a limited number of clients only. If you are interested in participating, contact Emarsys support.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Media db / Database folder",
+    "name": "Create a Media Database Folder",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/folder",
+    "url_obj": {},
+    "body_raw": "{\n  \"name\": \"Assets\",\n  \"parent\": 12341234\n}",
+    "desc": "Creates a new folder in a specified existing parent folder in the Media Database."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Media db / Database folder",
+    "name": "List Media Database Folders",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/folder?folder=81739474",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/folder?folder=81739474",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "folder"
+      ],
+      "query": [
+        {
+          "key": "folder",
+          "value": "81739474",
+          "description": "The folder identifier. If provided, only subfolders of the specified folder are listed."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of all folders in the Media Database.\n\n**Tip:** Use the `folder` query parameter to only list subfolders of a specific folder."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Media db / Database file / {file Id}",
+    "name": "Get a Media Database File",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/file/:fileId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/file/:fileId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "file",
+        ":fileId"
+      ],
+      "variable": [
+        {
+          "key": "fileId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the file."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the properties of a media file in the Media Database."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Media db / Database file / {file Id}",
+    "name": "Delete a Media Database File",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/file/:fileId/delete",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/file/:fileId/delete",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "file",
+        ":fileId",
+        "delete"
+      ],
+      "variable": [
+        {
+          "key": "fileId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the file."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Removes a media file from the Media Database."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Media db / Database file",
+    "name": "Upload a File into the Media Database",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/file",
+    "url_obj": {},
+    "body_raw": "{\n  \"folder\": 840559,\n  \"filename\": \"logo.png\",\n  \"file\": \"Dm++/vUMBAQEBAQEBAQEBAQEBAQAQEAQEBAQEBAQEBAQEBAcO/w4Dvv70RCO+/veKCrO+/veKCrAMBIgRAQ==…\",\n  \"preserve_filename\": 0\n}",
+    "desc": "Uploads a file to the Media Database in Base64 encoding.\n\n**Notes**\n- File names are case sensitive.\n- The upload limit is 1 MB for images, 8 MB for documents, and 4 MB for other file formats.\n- Refer to uploaded files in email campaigns in the following format:\n  ```\n  <img src=\"/custloads/{customer_identifier}/{filename.extension}\">\n  ```"
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Media db / Database file",
+    "name": "List Media Database Files",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/file/?folder=81739474",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/file/?folder=81739474",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "file",
+        ""
+      ],
+      "query": [
+        {
+          "key": "folder",
+          "value": "81739474",
+          "description": "The folder identifier. If provided, only files in the specified folder are listed."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of all media files in the Media Database.\n\n**Tip:** Use the `folder` query parameter to only list files in a specific folder."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Relational data",
+    "name": "Insert Records into an RDS Table",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records",
+    "url_obj": {
+      "raw": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "rds",
+        "connections",
+        ":connectionName",
+        "tables",
+        ":tableName",
+        "records"
+      ],
+      "variable": [
+        {
+          "key": "connectionName",
+          "value": "id",
+          "description": "(Required) The name of the connection to the Relational Data Service."
+        },
+        {
+          "key": "tableName",
+          "value": "id",
+          "description": "(Required) The name of the table in the Relational Data Service."
+        }
+      ]
+    },
+    "body_raw": "[\n    {\n        \"name\": \"Joe\",\n        \"age\": 34\n    },\n    {\n        \"name\": \"Mary\",\n        \"age\": null\n    }\n]",
+    "desc": "Inserts the records into a custom table in the Relational Data Service (RDS). Records that violate any constraints on the table are ignored. For example, new records that have a conflicting primary key with an existing record are not inserted.\n\nThis feature is only available for subscribed customers. For further information, contact your account manager.\n\n**Note:** The maximum number of objects per request is 1000."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Relational data",
+    "name": "Query Records in an RDS Table",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records?{keyField}=id",
+    "url_obj": {
+      "raw": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records?{keyField}=id",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "rds",
+        "connections",
+        ":connectionName",
+        "tables",
+        ":tableName",
+        "records"
+      ],
+      "query": [
+        {
+          "key": "{keyField}",
+          "value": "id",
+          "description": "(Required) The name of the key field and its value used as search criteria.\n\n**Notes**\n- Only exact matches are supported.\n- Key fields must be indexed, assuming that indexing is available for the database type of the connection.\n- Append multiple key-value pairs separated by an ampersand to add multiple search criteria.\n\n**Example**\n```\n?{key_field_1}={value_1}&{key_field_2}={value_2}\n```"
+        }
+      ],
+      "variable": [
+        {
+          "key": "connectionName",
+          "value": "id",
+          "description": "(Required) The name of the connection to the Relational Data Service."
+        },
+        {
+          "key": "tableName",
+          "value": "id",
+          "description": "(Required) The name of the table in the Relational Data Service."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the records from a custom table in the Relational Data Service (RDS).\n\nThis feature is only available for subscribed customers. For further information, contact your account manager.\n\n**Note:** Results are not paged. The maximum number of objects per request is 1000."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Relational data",
+    "name": "Replace an RDS Table",
+    "method": "PUT",
+    "raw_url": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records",
+    "url_obj": {
+      "raw": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "rds",
+        "connections",
+        ":connectionName",
+        "tables",
+        ":tableName",
+        "records"
+      ],
+      "variable": [
+        {
+          "key": "connectionName",
+          "value": "id",
+          "description": "(Required) The name of the connection to the Relational Data Service."
+        },
+        {
+          "key": "tableName",
+          "value": "id",
+          "description": "(Required) The name of the table in the Relational Data Service."
+        }
+      ]
+    },
+    "body_raw": "[\n    {\n        \"name\": \"Joe\",\n        \"age\": 34\n    },\n    {\n        \"name\": \"Mary\",\n        \"age\": null\n    }\n]",
+    "desc": "Replaces a custom table with the provided records in the Relational Data Service (RDS).\n\nThis feature is only available for subscribed customers. For further information, contact your account manager.\n\n**Important:** This call deletes all previous records from the table.\n\n**Note:** The maximum number of objects per request is 1000."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Relational data",
+    "name": "Upsert Records in an RDS Table",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records/upsert",
+    "url_obj": {
+      "raw": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records/upsert",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "rds",
+        "connections",
+        ":connectionName",
+        "tables",
+        ":tableName",
+        "records",
+        "upsert"
+      ],
+      "variable": [
+        {
+          "key": "connectionName",
+          "value": "id",
+          "description": "(Required) The name of the connection to the Relational Data Service."
+        },
+        {
+          "key": "tableName",
+          "value": "id",
+          "description": "(Required) The name of the table in the Relational Data Service."
+        }
+      ]
+    },
+    "body_raw": "[\n    {\n        \"id\": 1,\n        \"name\": \"Joe\",\n        \"age\": 34\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Mary\",\n        \"age\": null\n    }\n]",
+    "desc": "Inserts and updates records in a custom table in the Relational Data Service (RDS).\n\nThis feature is only available for subscribed customers. For further information, contact your account manager.\n\n**Notes**\n- The maximum number of objects per request is 1000.\n- Table structures are not returned on this endpoint. Therefore, you must know the primary key column(s) defined in the table you are accessing."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Relational data",
+    "name": "Delete Records from an RDS Table",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records/remove",
+    "url_obj": {
+      "raw": "{{baseUrl}}/rds/connections/:connectionName/tables/:tableName/records/remove",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "rds",
+        "connections",
+        ":connectionName",
+        "tables",
+        ":tableName",
+        "records",
+        "remove"
+      ],
+      "variable": [
+        {
+          "key": "connectionName",
+          "value": "id",
+          "description": "(Required) The name of the connection to the Relational Data Service."
+        },
+        {
+          "key": "tableName",
+          "value": "id",
+          "description": "(Required) The name of the table in the Relational Data Service."
+        }
+      ]
+    },
+    "body_raw": "[\n    {\n        \"name\": \"Joe\",\n        \"age\": 34\n    },\n    {\n        \"name\": \"Mary\",\n        \"age\": null\n    }\n]",
+    "desc": "Deletes the records from a custom table in the Relational Data Service (RDS) that match the specified criteria.\n\nThis feature is only available for subscribed customers. For further information, contact your account manager.\n\n**Note:** The maximum number of objects per request is 1000."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Settings (misc)",
+    "name": "Get Customer Settings",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/settings",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns the current settings of the specified customer account, such as timezone or name.\n\n**Important:** Access to administrative endpoints is restricted. If you need access, contact Emarsys support."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Settings (misc)",
+    "name": "List Link Categories",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/settings/linkcategories",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns the categories of links used in emails based on their type."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Settings (misc)",
+    "name": "Get Account Languages",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/settings/languages/translation/en",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns the list of available languages of the account."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Smart Insight (Scarab)",
+    "name": "*** Upload Sales Data",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/https://admin.scarabresearch.com/hapi/merchant/:merchant-id/sales-data/api",
+    "url_obj": {
+      "raw": "{{baseUrl}}/https://admin.scarabresearch.com/hapi/merchant/:merchant-id/sales-data/api",
+      "protocol": "{{baseUrl}}/https",
+      "host": [
+        "admin",
+        "scarabresearch",
+        "com"
+      ],
+      "path": [
+        "hapi",
+        "merchant",
+        ":merchant-id",
+        "sales-data",
+        "api"
+      ],
+      "variable": [
+        {
+          "key": "merchant-id",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The 16-letter merchant identifier provided by Emarsys."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": ">**Note:** If you are a Smart Insight customer, you can choose to upload your sales data to our SFTP servers. However, this is a legacy option that has several disadvantages compared to using the Sales Data API. If you prefer to use SFTP, contact Emarsys support.\n\n## 1. Make Your Initial Upload\n\nManual upload on the **Sales Data** page is the preferred method for making your initial upload of historical sales data during the onboarding process, as it allows you to validate the file and correct any errors straight away.\n\nProceed as follows:\n1. Ensure that your sales data file is ready and formatted according to the [specifications](https://help.emarsys.com/hc/en-us/articles/360003070654-preparing-your-sales-data-file).\n2. Go to **Admin** > **Data Sources** > **Sales Data**.\n3. Click **Validate/upload file**.\n   \n4. Browse for your sales data file and select it.\n\n   Detected issues are listed as warnings and errors. Files with issues cannot be uploaded. Fix them and try again.\n\n   **Note:** Submitting the same file multiple times does not duplicate your data.\n5. Click **Activate upload** to finalize the upload.\n\n\n## Set Up Regular Updates\n\nSet up regular updates once the initial historical sales data is uploaded. The easiest way to automate regular sales data imports to Emarsys is to use the Sales Data API.\n\n1. Go to **Admin** > **Data Sources** > **Sales Data**.\n2. Click **Manage sales data**.\n3. Click **Show API upload details**\n\n   All information you need to set up the import with minimal effort is shown."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Source",
+    "name": "List Contact Sources",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/source",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": ""
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Source",
+    "name": "Create a Contact Source",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/source/create",
+    "url_obj": {},
+    "body_raw": "{\n  \"name\": \"my_super_source\"\n}",
+    "desc": "Creates and labels a new contact source.\n\nSources created via the API are **only** for exporting data changes. Once created via the API, the source can be selected in **Contacts > Data Export > Data changes > Changes originate from**. For more on the export process, see [Exporting data changes](https://help.emarsys.com/hc/en-us/articles/115004635729-Exporting-data-changes \"Emarsys Help Portal\").\n\nContact sources of this type can only be created through the API.\n\n**Important:** Contact sources described here and the internal contact `source_id` (field identifier *33*) are different entities. The `source_id` fields record how the contact was added, such as by manual entry, import, or using a registration form. These fields are often used for segmentation in the Emarsys Suite."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Source",
+    "name": "Delete a Contact Source",
+    "method": "DELETE",
+    "raw_url": "{{baseUrl}}/v2/source/:sourceId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/source/:sourceId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "source",
+        ":sourceId"
+      ],
+      "variable": [
+        {
+          "key": "sourceId",
+          "value": "81739474",
+          "description": "(Required) The identifier of the contact source."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Deletes an existing contact source."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "Get Email Campaign Languages",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/language",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns a list of languages available for creating emails. For a list of supported languages, see [Language codes](docs/appendix/language-codes.md)."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "Get Email Campaign Categories",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/emailcategory",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns the alphabetized list of email campaign categories available for creating email campaigns."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "Blocklist Emails and Domains",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/blocklist",
+    "url_obj": {},
+    "body_raw": "{\n  \"emails\": [\n    \"address1@example.com\",\n    \"address2@example.com\"\n  ],\n  \"domains\": [\n    \"example.com\",\n    \"example.net\"\n  ]\n}",
+    "desc": "Adds emails and domains to the internal blocklist. Blocklisted entries are not participating in any campaign.\n\n**Note:** The maximum batch size is 1000 emails and 1000 domains per call."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "List Conditional Text Rules",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/condition",
+    "url_obj": {},
+    "body_raw": "",
+    "desc": "Returns a list of conditional text rules. Use conditional text to tailor the content of an email campain to your customers."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "Trigger a Wishlist Update",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/wishlist/update",
+    "url_obj": {},
+    "body_raw": "{\n  \"key_id\": \"culpa \",\n  \"events\": [\n    {\n      \"external_id\": \"qui in fugiat reprehenderit\",\n      \"event_time\": \"adipisicing cillum amet\",\n      \"wishlist_content\": [\n        {\n          \"item_id\": \"ut ipsum qui Excepteur deserunt\",\n          \"quantity\": 18136546\n        },\n        {\n          \"item_id\": \"id ut aliquip\",\n          \"quantity\": -21872150\n        }\n      ],\n      \"trigger_id\": \"culpa\",\n      \"event_attributes\": {\n        \"myNumber\": 77079101,\n        \"myString\": \"L\"\n      }\n    },\n    {\n      \"external_id\": \"non id quis\",\n      \"event_time\": \"occaecat irure\",\n      \"wishlist_content\": [\n        {\n          \"item_id\": \"amet eu \",\n          \"quantity\": -24260164\n        },\n        {\n          \"item_id\": \"pariatur consectetur ea\",\n          \"quantity\": -56458779\n        }\n      ],\n      \"trigger_id\": \"reprehenderit voluptate\",\n      \"event_attributes\": {\n        \"myNumber\": -70154819,\n        \"myString\": \"officia elit dolor Ut\"\n      }\n    }\n  ]\n}",
+    "desc": "Activates a wishlist update event for the specified contacts.\n\n\n### Prerequisites\n- If you synchronize your contact data using your own unique identifier in your system, a custom contact field `externalId` must exist as the external identifier. To create one, use the [Create a field](https://dev.emarsys.com/docs/emarsys-api/b3A6MjQ4OTk4MTY) endpoint or go to **Admin** > **Field Editor** > **New** in the Emarsys application. For details on contact identifiers, see [Concepts](docs/before-you-start/concepts.md).\n>**Note:** Using external field identifiers is the recommended method for identifying contacts. However, you can use other Emasys system fields as well, such as email. For details, see [Contact system fields](docs/personalization/contact-system-fields.md).\n\n- The specified contact must exist in the Emarsys database to trigger an event.\n\n**Notes**\n\n- The maximum number of objects per request is 1000.\n- The maximum size of a single event is 20kB.\n- For Emarsys to follow-up changes, it is beneficial to have an initial load: we recommend sending through the current wishlist state for all your contacts with their corresponding event time. From that point on, Emarsys can calculate changes from the states (wishlist contents)."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "List Program Resources in Use",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/v2/programresource/?service_id=Ut pariatur adipisicing irure ut&resource_id=Ut pariatur adipisicing irure ut",
+    "url_obj": {
+      "raw": "{{baseUrl}}/v2/programresource/?service_id=Ut pariatur adipisicing irure ut&resource_id=Ut pariatur adipisicing irure ut",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "v2",
+        "programresource",
+        ""
+      ],
+      "query": [
+        {
+          "key": "service_id",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "(Required) The identifier of the external service."
+        },
+        {
+          "key": "resource_id",
+          "value": "Ut pariatur adipisicing irure ut",
+          "description": "The identifier of the resource that represents the settings of a particular node of a customer in the Automation Center."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of all external services and their resources available in the Automation Center for a customer."
+  },
+  {
+    "folder": "/v2/ ( Suite ) / Wishlist",
+    "name": "Send a Notification Message",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/v2/notification",
+    "url_obj": {},
+    "body_raw": "{\n  \"message\": \"Hello World!\"\n}",
+    "desc": "Sends a popup notification to the administrators of the account.\n\n**Important:** Only displayed if the administrator is currently logged in. You can check unread messages by clicking the bell icon in the navigation bar.\n\n\n**Note:** Potential errors originating from this endpoint are investigated during working hours only."
+  },
+  {
+    "folder": "/sms/ ( SMS ) / Campaigns / {campaign Id}",
+    "name": "PUT campaigns-campaign Id",
+    "method": "PUT",
+    "raw_url": "{{baseUrl}}/campaigns/:campaignId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/campaigns/:campaignId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "campaigns",
+        ":campaignId"
+      ],
+      "variable": [
+        {
+          "key": "campaignId",
+          "value": "eiusmod nisi Duis",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "body_raw": "\"eiusmod nisi Duis\"",
+    "desc": "Lets you update an existing SMS campaign.\n\n---\n**Mandatory parameters**\n\nAt least one of the following:\n\n- **type**: the type can only be changed from *ac* to *batch* if no active AC program uses the campaign\n- **title**\n- **sender**\n-\t**message**\n-\t**deduplicate_recipients**\n-\t**source_type** (**source_type** and **source_id** must be present in the suite in case of *batch* campaigns, and must be *null* or undefined for campaigns with **type** *ac*)\n-\t**source_id**\n-\t**unsubscribe.enabled**\n-\t**unsubscribe.title**\n-\t**unsubscribe.text**\n-\t**unsubscribe.button_text**\n-\t**unsubscribe.after_text**\n\n---\n**Forbidden parameters**\n\nIn order to change the following parameters, a **Launch a Campaign** request must be made:\n-\t**status**\n- **scheduled_to**\n\n---\n**IMPORTANT**\nMake sure the following conditions apply:\n- The recipient source exists in the Suite if **source_type**|**source_id** is updated.\n-\ta campaign can only be updated while it is in either *draft** or *scheduled* state. If the campaign is in *scheduled* state, the **scheduled_to** date must be at least 1 minute in the future.\n- TWIG template syntax is used."
+  },
+  {
+    "folder": "/sms/ ( SMS ) / Campaigns / {campaign Id}",
+    "name": "PATCH campaigns-campaign Id",
+    "method": "PATCH",
+    "raw_url": "{{baseUrl}}/campaigns/:campaignId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/campaigns/:campaignId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "campaigns",
+        ":campaignId"
+      ],
+      "variable": [
+        {
+          "key": "campaignId",
+          "value": "eiusmod nisi Duis",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "body_raw": "\"eiusmod nisi Duis\"",
+    "desc": "Lets you launch/schedule a *batch* campaign, or cancel its scheduled launch by updating the value of the **status** attribute the following way:\r\n\r\n**1.** To launch the campaign at a specific date (schedule a campaign):\r\n\r\n- {\r\n  \"**status**\": \"*scheduled*\",\r\n  \r\n  \"**scheduled_to**\": \"2018-02-28T13:15:00.000Z\"\r\n}\r\n\r\n**2.** To launch the campaign immediately:\r\n\r\n - {\r\n  \"**status**\": \"*triggered*\"\r\n}\r\n\r\n**3.** To cancel a scheduled launch:\r\n\r\n- {\r\n  \"**status**\": \"*draft*\"\r\n}\r\n___\r\n**Mandatory parameters:**\r\n- **customerId**\r\n- **campaignId**\r\n- **status** (*draft* or *triggered*)\r\n___\r\nCampaigns with **type** *AC* must be triggered/scheduled/canceled through an AC program.\r\n\r\n**Note**: Only campaigns in *scheduled* state can be canceled."
+  },
+  {
+    "folder": "/sms/ ( SMS ) / Campaigns / {campaign Id}",
+    "name": "GET campaigns-campaign Id",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/campaigns/:campaignId",
+    "url_obj": {
+      "raw": "{{baseUrl}}/campaigns/:campaignId",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "campaigns",
+        ":campaignId"
+      ],
+      "variable": [
+        {
+          "key": "campaignId",
+          "value": "eiusmod nisi Duis",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns the SMS campaign with the specified campaign ID."
+  },
+  {
+    "folder": "/sms/ ( SMS ) / Campaigns",
+    "name": "GET campaigns",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/campaigns?limit=-23532290&offset=-23532290",
+    "url_obj": {
+      "raw": "{{baseUrl}}/campaigns?limit=-23532290&offset=-23532290",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "campaigns"
+      ],
+      "query": [
+        {
+          "key": "limit",
+          "value": "-23532290",
+          "description": "(Required) Limits the number of SMS campaigns returned in the list."
+        },
+        {
+          "key": "offset",
+          "value": "-23532290",
+          "description": "(Required) Used to skip a number of SMS campaigns before results are fetched (remember that campaigns are listed in a *latest first* fashion)."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Returns a list of ongoing SMS campaigns.\n\n**Example**\n\nhttps://api.emarsys.net/api/sms/campaigns?limit=1000&offset=0"
+  },
+  {
+    "folder": "/sms/ ( SMS ) / Campaigns",
+    "name": "POST campaigns",
+    "method": "POST",
+    "raw_url": "{{baseUrl}}/campaigns",
+    "url_obj": {},
+    "body_raw": "\"eiusmod nisi Duis\"",
+    "desc": "Lets you create an SMS campaign.\n\nMake sure the following conditions apply:\n- You are using all the mandatory parameters;\n- The\trecipient source exists in your Suite (in case of batch SMS sending);\n- **source_type** and **source_id** must be *null* or undefined in case of AC type requests;\n- TWIG template syntax is used."
+  },
+  {
+    "folder": "/sms/ ( SMS )",
+    "name": "GET inbound-messages",
+    "method": "GET",
+    "raw_url": "{{baseUrl}}/inbound-messages?{limit}=1000&{offset}=4101444904&{startDate}=nothing&{endDate}=now",
+    "url_obj": {
+      "raw": "{{baseUrl}}/inbound-messages?{limit}=1000&{offset}=4101444904&{startDate}=nothing&{endDate}=now",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "inbound-messages"
+      ],
+      "query": [
+        {
+          "key": "{limit}",
+          "value": "1000",
+          "description": "(Required) The maximum number of inbound SMS  fetched by request."
+        },
+        {
+          "key": "{offset}",
+          "value": "4101444904",
+          "description": "(Required) The logic will start fetching after skipping the number of inbound sms messages specified here."
+        },
+        {
+          "key": "{startDate}",
+          "value": "nothing",
+          "description": "(Required) All fetched inbound SMS messages will be newer than the date specified here.\nIt must be URL-encoded."
+        },
+        {
+          "key": "{endDate}",
+          "value": "now",
+          "description": "(Required) All fetched inbound SMS messages will be older than the date specified here.\nIt must be URL-encoded."
+        }
+      ]
+    },
+    "body_raw": "",
+    "desc": "Fetches inbound SMS messages in **latest first** order.\n\n**Example:**\n\napi.emarsys.net/api/sms/inbound-messages?limit=500&offset=100?startDate=2018-02-28T13%3A15%3A00.000Z&endDate=2018-03-05T00%3A00%3A00.000Z"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "active": "public_gdm_emea",
+  "systems": {
+    "public_gdm_emea": {
+      "label": "Public GDM EMEA (Public_GDM_EMEA037)",
+      "tenantId": "Public_GDM_EMEA037",
+      "clientId": "your-client-id",
+      "clientSecret": "your-client-secret",
+      "baseUrl": "https://api.emarsys.net",
+      "tokenUrl": "https://auth.emarsys.net/oauth2/token",
+      "jwksUrl": "https://auth.emarsys.net/.well-known/jwks.json",
+      "authType": "oauth2"
+    },
+    "legacy_wsse_example": {
+      "label": "Legacy WSSE Tenant",
+      "tenantId": "my_wsse_tenant",
+      "username": "api_user_001",
+      "secret": "my_shared_secret",
+      "baseUrl": "https://api.emarsys.net",
+      "authType": "wsse"
+    }
+  }
+}

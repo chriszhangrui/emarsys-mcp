@@ -1,0 +1,15 @@
+{
+  "active": "public_gdm_emea",
+  "systems": {
+    "public_gdm_emea": {
+      "label": "Public GDM EMEA (Public_GDM_EMEA037)",
+      "tenantId": "Public_GDM_EMEA037",
+      "clientId": "a0b92d9b-f1db-40e5-9ac2-4b588fe8c0b4",
+      "clientSecret": "qEbuF_vF9TOFsZ0MuwvH1zEjyi",
+      "baseUrl": "https://api.emarsys.net",
+      "tokenUrl": "https://auth.emarsys.net/oauth2/token",
+      "jwksUrl": "https://auth.emarsys.net/.well-known/jwks.json",
+      "authType": "oauth2"
+    }
+  }
+}
