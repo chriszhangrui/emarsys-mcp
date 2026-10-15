@@ -556,6 +556,51 @@ async def emarsys_get_email_campaign(campaign_id: Union[str, int]) -> str:
 
 
 @mcp.tool(
+    name="emarsys_create_email_campaign",
+    description="Create a new HTML email marketing campaign in Emarsys with subject, rich HTML template, sender name, and recipient target (contact_list_id or filter_id).",
+)
+async def emarsys_create_email_campaign(
+    name: str,
+    subject: str,
+    html_source: str,
+    fromname: str = "英皇珠宝 EMPEROR JEWELLERY",
+    fromemail: str = "vip@emperorjewellery.com",
+    contact_list_id: Optional[Union[str, int]] = None,
+    filter_id: Optional[Union[str, int]] = None,
+    text_source: Optional[str] = None,
+    language: str = "zh",
+    email_category: str = "0",
+) -> str:
+    """Create a new email marketing campaign in Emarsys."""
+    try:
+        payload: Dict[str, Any] = {
+            "name": name,
+            "language": language,
+            "subject": subject,
+            "fromname": fromname,
+            "fromemail": fromemail,
+            "email_category": str(email_category),
+            "html_source": html_source,
+            "text_source": text_source or "请在支持 HTML 的邮件客户端中查看此尊享邀请函。",
+            "browse": 1,
+            "text_only": 0,
+            "unsubscribe": 1,
+        }
+        if contact_list_id is not None:
+            payload["contactlist"] = int(contact_list_id)
+        if filter_id is not None:
+            payload["filter"] = int(filter_id)
+
+        res = await emarsys_client.request("POST", "/api/v3/email", json_data=payload)
+        return json.dumps(res, indent=2, ensure_ascii=False)
+    except EmarsysAPIError as e:
+        return json.dumps(e.to_dict(), indent=2, ensure_ascii=False)
+    except Exception as e:
+        return json.dumps({"error": str(e)}, indent=2, ensure_ascii=False)
+
+
+
+@mcp.tool(
     name="emarsys_send_test_email",
     description="Send a test preview of an email campaign to one or more recipient email addresses without launching the live campaign.",
 )
