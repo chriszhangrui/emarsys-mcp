@@ -24,7 +24,12 @@ case "$1" in
         "$PYTHON" -m unittest test_emarsys.py -v
         ;;
     http)
-        "$PYTHON" server.py --http --port "${PORT:-8000}"
+        shift
+        "$PYTHON" server.py --http --transport http --port "${PORT:-8000}" "$@"
+        ;;
+    sse)
+        shift
+        "$PYTHON" server.py --http --transport sse --port "${PORT:-8000}" "$@"
         ;;
     *)
         exec "$PYTHON" server.py "$@"
